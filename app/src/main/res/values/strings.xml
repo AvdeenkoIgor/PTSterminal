@@ -1,0 +1,252 @@
+<resources>
+    <string name="app_name">PTS terminal</string>
+    <string name="title_info">Информация.</string>
+    <string name="title_warning">Предупреждение.</string>
+    <string name="title_errror">Ошибка.</string>
+
+    <string name="title_dialog_enter_amount">Введите количество продукта</string>
+    <string name="title_dialog_enter_config">Введите персональные данные</string>
+    <string name="title_order_confirm">Подтвердите заказ</string>
+    <string name="title_order_paid">Оплата заказа</string>
+    <string name="titleDispenserControlOrderAmount">Количество(л.)</string>
+    <string name="titleDispenserControlOrderProduct">Продукт</string>
+
+    <string name="titlePage_pumps">Заправочные места</string>
+    <string name="titlePage_authorisation">Авторизация пользователя</string>
+    <string name="titlePage_disp_control">Управление заправочным местом</string>
+    <string name="titlePage_select_product">Выбор продукта</string>
+    <string name="titlePage_make_order">Оформление заказа</string>
+    <string name="titlePage_pay_order">Оплата заказа</string>
+    <string name="titleDispenserControlOrderState">Состояние заказа:</string>
+
+
+    <string name="alert_dialog_two_buttons_title">Вы хотите закрыть приложение?</string>
+    <string name="alert_dialog_two_buttons_from_main_menu">Вы хотите выйти из главного меню?</string>
+    <string name="alert_dialog_reconnect_title">Сервер не отвечает.\n Повторить попытку?</string>
+
+
+    <string name="textLogoTiT"><b>T&amp;T</b></string>
+    <string name="textLogoPTSMaster"><b>PTS-Master Пульт 1.1.</b></string>
+    <string name="textUser"><b>Оператор:</b></string>
+    <string name="textOrderProductName">Продукт:</string>
+    <string name="textOrderProductAmount">Количество:</string>
+    <string name="textOrderProductAmountUnit">(литры)</string>
+    <string name="textOrderProductMoneyUnit">(грн.)</string>
+    <string name="textOrderProductSummUnit">грн.</string>
+    <string name="textOrderProductSumm">СУММА:</string>
+    <string name="textOrderFullTank">Полный бак</string>
+    <string name="textDispenserControl_summ">Сумма</string>
+    <string name="textDispenserControl_litres">Литры</string>
+    <string name="textDispenserControl_price">Цена</string>
+    <string name="textImposiblePayFullTank">Данный заказ не может быть предварительно оплачен</string>
+    <string name="textOrderHasBeenPaid">Заказ оплачен</string>
+    <string name="textNeedCashback">Необходимо вернуть сдачу:</string>
+    <string name="textOrderNotHasBeenPaid">Заказ оплачен неполностью</string>
+    <string name="textConnectingToServer">Обмен данными с сервером.</string>
+
+    <string name="mess_dispenser_ready">Готов к отпуску</string>
+    <string name="mess_dispenser_order_make">Выполнение заказа</string>
+    <string name="mess_dispenser_order_end">Заказ выполнен</string>
+
+    <string name="messErrror_need_nozzle_up">Поднимите пистолет</string>
+    <string name="messError_nozzle_bad">Поднят пистолет с другим продуктом</string>
+    <string name="messErrror_need_order_pay">Отпуск окончен, нужно оплатить заказ</string>
+    <string name="messErrror_null_order">Невозможно сделать заказ на нулевое количество</string>
+    <string name="messErrror_null_pay">Невозможно сделать нулевую оплату</string>
+
+    <string name="btn_create">Create</string>
+    <string name="btn_send">Send</string>
+    <string name="btn_ok">OK</string>
+    <string name="btn_yes">Да</string>
+    <string name="btn_reconnect">Подключиться</string>
+    <string name="btn_exit">Выход</string>
+    <string name="btn_no">Нет</string>
+    <string name="btn_scancode">Сканер</string>
+    <string name="btn_begin_request">Begin request</string>
+
+    <string name="btn_start">Пуск</string>
+    <string name="btn_stop">Стоп</string>
+    <string name="btn_back">Назад</string>
+    <string name="btn_cancel">Отменить</string>
+    <string name="btn_pay">Оплатить</string>
+    <string name="btn_help">Помощь</string>
+    <string name="btn_clear">Очистить</string>
+
+    <string name="btn_fulltank">ПБ</string>
+    <string name="btn_cash">Г</string>
+    <string name="btn_backspace">&#8592;</string>
+    <string name="btn_money">$</string>
+    <string name="btn_confirm">OK</string>
+    <string name="btn_scaner">Сканер</string>
+    <string name="btn_1">1</string>
+    <string name="btn_2">2</string>
+    <string name="btn_3">3</string>
+    <string name="btn_4">4</string>
+    <string name="btn_5">5</string>
+    <string name="btn_6">6</string>
+    <string name="btn_7">7</string>
+    <string name="btn_8">8</string>
+    <string name="btn_9">9</string>
+    <string name="btn_0">0</string>
+    <string name="btn_C">C</string>
+    <string name="btn_0point">0/.</string>
+    <string name="btn_00">00</string>
+    <string name="btn_point"><b>.</b></string>
+
+    <string name="stringProductAmountFull">FULL</string>
+
+    <string name="order_unit_money">Деньги</string>
+    <string name="order_unit_litres">Литры</string>
+    <string name="order_pay_form">Форма оплаты</string>
+    <string name="clerk_list">Список пользователей</string>
+
+    <!-- en ******************************************************************************************************************************** -->
+    <!--
+        <string name="title_info">Information.</string>
+        <string name="title_warning">Warning.</string>
+        <string name="title_errror">Error.</string>
+
+        <string name="title_dialog_enter_amount">Enter product amount</string>
+        <string name="title_dialog_enter_config">Enter personal details</string>
+        <string name="title_order_confirm">Confirm the order</string>
+        <string name="title_order_paid">Payment for the order</string>
+        <string name="titleDispenserControlOrderAmount">Number(l.)</string>
+        <string name="titleDispenserControlOrderProduct">Product</string>
+        <string name="titleDispenserControlOrderState">Order status:</string>
+
+        <string name="titlePage_pumps">Fuel dispensers</string>
+        <string name="titlePage_authorisation">User authorisation</string>
+        <string name="titlePage_disp_control">Management over fuel dispenser</string>
+        <string name="titlePage_select_product">Select a product</string>
+        <string name="titlePage_make_order">Order processing</string>
+        <string name="titlePage_pay_order">Payment for an order</string>
+
+
+        <string name="alert_dialog_two_buttons_title">Do you want to close an application?</string>
+        <string name="alert_dialog_two_buttons_from_main_menu">Do you want to exit from a main menu?</string>
+        <string name="alert_dialog_reconnect_title">Server fails to respond.\n Try again?</string>
+
+
+        <string name="textLogoTiT"><b>T&amp;T</b></string>
+        <string name="textLogoPTSMaster"><b>PTS-Master Control Panel</b></string>
+        <string name="textUser"><b>Operator:</b></string>
+        <string name="textOrderProductName">Product:</string>
+        <string name="textOrderProductAmount">Amount:</string>
+        <string name="textOrderProductAmountUnit">(liters)</string>
+        <string name="textOrderProductMoneyUnit">(UAH.)</string>
+        <string name="textOrderProductSummUnit">UAH.</string>
+        <string name="textOrderProductSumm">SUMM:</string>
+        <string name="textOrderFullTank">Full tank</string>
+        <string name="textDispenserControl_summ">Summ</string>
+        <string name="textDispenserControl_litres">Liters</string>
+        <string name="textDispenserControl_price">Price</string>
+        <string name="textImposiblePayFullTank">This order can not be pre-paid</string>
+        <string name="textOrderHasBeenPaid">Order has been paid</string>
+        <string name="textNeedCashback">Change need to be returned:</string>
+        <string name="textOrderNotHasBeenPaid">Order has been paid not fully</string>
+        <string name="textConnectingToServer">Data exchange with a server.</string>
+
+        <string name="mess_dispenser_ready">Ready for dispensing</string>
+        <string name="mess_dispenser_order_make">Order execution</string>
+        <string name="mess_dispenser_order_end">Order is executed</string>
+
+        <string name="messErrror_need_nozzle_up">Pick up a nozzle</string>
+        <string name="messError_nozzle_bad">Nozzle with another product is picked up</string>
+        <string name="messErrror_need_order_pay">Dispensing is finished, the order need to be payed</string>
+        <string name="messErrror_null_order">Impossible to make an order for zero amount</string>
+        <string name="messErrror_null_pay">Impossible to make a zero payment</string>
+
+        <string name="btn_create">Create</string>
+        <string name="btn_send">Send</string>
+        <string name="btn_ok">OK</string>
+        <string name="btn_yes">Yes</string>
+        <string name="btn_reconnect">Connect</string>
+        <string name="btn_exit">Exit</string>
+        <string name="btn_no">No</string>
+        <string name="btn_scancode">Scanner</string>
+        <string name="btn_begin_request">Begin request</string>
+
+        <string name="btn_start">Start</string>
+        <string name="btn_stop">Stop</string>
+        <string name="btn_back">Back</string>
+        <string name="btn_cancel">Cancel</string>
+        <string name="btn_pay">Pay</string>
+        <string name="btn_help">Help</string>
+        <string name="btn_clear">Clear</string>
+
+        <string name="btn_fulltank">FT</string>
+        <string name="btn_cash">Cash</string>
+        <string name="btn_backspace">&#8592;</string>
+        <string name="btn_money">$</string>
+        <string name="btn_confirm">OK</string>
+        <string name="btn_scaner">Scanner</string>
+        <string name="btn_1">1</string>
+        <string name="btn_2">2</string>
+        <string name="btn_3">3</string>
+        <string name="btn_4">4</string>
+        <string name="btn_5">5</string>
+        <string name="btn_6">6</string>
+        <string name="btn_7">7</string>
+        <string name="btn_8">8</string>
+        <string name="btn_9">9</string>
+        <string name="btn_0">0</string>
+        <string name="btn_C">C</string>
+        <string name="btn_0point">0/.</string>
+        <string name="btn_00">00</string>
+        <string name="btn_point"><b>.</b></string>
+
+        <string name="stringProductAmountFull">FULL</string>
+
+        <string name="order_unit_money">Money</string>
+        <string name="order_unit_litres">Liters</string>
+        <string name="order_pay_form">Form of payment</string>
+        <string name="clerk_list">List of users</string>
+    -->
+
+</resources>
+
+
+    <!--
+
+        <string name="textLogoTiT"><b>T<u>i</u>T</b></string>
+
+        <string name="page_title_request_cheque">REQUEST CHEQUE:</string>
+        <string name="page_title_close_cheque">CLOSE CHEQUE:</string>
+
+        <string name="title_authorization">Authorization</string>
+        <string name="title_get_card_pin">Get card code and pin</string>
+        <string name="title_get_code">Get code</string>
+        <string name="title_main_menu">Main menu</string>
+
+        <string-array name="error_ptsMaster">
+            <item>"Unknown error"</item>
+            <item>"Unknown client"</item>
+            <item>"Client not active"</item>
+            <item>"Unknown operator"</item>
+            <item>"PIN code operator is incorrect"</item>
+            <item>"The operator is inactive"</item>
+            <item>"The operator does not work right with the customer"</item>
+            <item>"There is no card in the database"</item>
+            <item>"Bad PinCode"</item>
+            <item>"Card inactive"</item>
+            <item>"On the card there are no active purses"</item>
+            <item>"No configuration"</item>
+            <item>"The card holder is not present"</item>
+            <item>"The vehicle card is missing"</item>
+            <item>"There is no check in the database"</item>
+            <item>"Trying to work with an inactive check"</item>
+            <item>"Trying to work with inactive purse"</item>
+            <item>"Insufficient funds in your wallet (dead residue)"</item>
+            <item>"Wrong status or action"</item>
+            <item>"This item is not in the database"</item>
+            <item>"Excess amounts of withdrawal"</item>
+            <item>"Item Out date on the check"</item>
+            </string-array>
+
+        <string name="auth_card">Card:</string>
+        <string name="auth_pin">Pin:</string>
+        <string name="alert_dialog_amount">In purse:</string>
+        <string name="alert_dialog_config">Enter:</string>
+
+
+     -->

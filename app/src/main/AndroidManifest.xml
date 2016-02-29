@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.root.ptsterminal" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >>
+        <activity android:name=".PTSTerminal"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service
+            android:enabled="true"
+            android:name=".PTSMasterService">
+        </service>
+        <activity
+            android:name=".PTSMasterClientActivity"
+            android:theme="@android:style/Theme.Panel">
+        </activity>
+        <activity
+            android:name="UserEntryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Panel">
+        </activity>
+        <activity android:name=".ScannerActivity"
+            android:label="Scanner Activity"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+        </activity>
+        <activity
+            android:name=".GridViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Panel">
+        </activity>
+        <activity
+            android:name=".OrderSelectProductActivity"
+            android:theme="@android:style/Theme.Panel">
+        </activity>
+        <activity
+            android:name=".DispenserControlActivity"
+            android:theme="@android:style/Theme.Panel">
+        </activity>
+        <activity
+            android:name=".OrderConfirmActivity"
+            android:theme="@android:style/Theme.Panel">
+        </activity>
+        <activity
+            android:name=".OrderProductActivity"
+            android:theme="@android:style/Theme.Panel">
+        </activity>
+        <activity
+            android:name=".OrderPayActivity"
+            android:theme="@android:style/Theme.Panel">
+        </activity>
+        <!--
+		<activity
+        	android:name=".NozzlePriceActivity"
+	        android:label="@string/title_nozzle_price"
+	        android:theme="@android:style/Theme.Panel">
+        </activity>
+
+                <activity
+        	android:name=".MainMenuActivity"
+	        android:theme="@android:style/Theme.NoTitleBar"
+            android:label="@string/title_main_menu">
+        </activity>
+        <activity
+        	android:name=".RequestChequeActivity"
+	        android:theme="@android:style/Theme.NoTitleBar"
+            android:label="@string/title_request_cheque">
+        </activity>
+        <activity
+        	android:name=".CloseChequeActivity"
+	        android:theme="@android:style/Theme.NoTitleBar"
+            android:label="@string/title_close_cheque">
+        </activity>
+
+         -->
+    </application>
+
+</manifest>
