@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/root/ptsterminal/ArrayList_BasketData.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/root/ptsterminal/ArrayList_BasketItems.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/root/ptsterminal/ArrayList_Clerks.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/root/ptsterminal/ArrayList_Dispenser.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/root/ptsterminal/ArrayList_DispenserCfg.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/root/ptsterminal/ArrayList_Order.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/root/ptsterminal/ArrayList_PTSMaster.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/root/ptsterminal/ArrayList_PayForm.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/root/ptsterminal/ArrayList_PaymentAnswer.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/root/ptsterminal/ArrayList_ProductAssortment.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/root/ptsterminal/ArrayList_Signal.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/root/ptsterminal/ArrayList_Store.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/root/ptsterminal/BasketItem.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/root/ptsterminal/CardHolderItem.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/root/ptsterminal/ChequesItem.java" charset="windows-1251" />

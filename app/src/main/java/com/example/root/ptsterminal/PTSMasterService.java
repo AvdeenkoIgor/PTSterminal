@@ -37,7 +37,7 @@ import android.provider.Settings;
 import android.util.Log;
 import android.widget.SlidingDrawer;
 import android.widget.Toast;
-import app.pts.terminal.adapter.ImageAdapter;
+import adapter.ImageAdapter;
 
 ///////////////////////////////////////////////////////////////////////////////////////
 //
