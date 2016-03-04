@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/PTSterminal.iml" filepath="$PROJECT_DIR$/PTSterminal.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/biggu_scanner-1.1.0/biggu_scanner-1.1.0.iml" filepath="$PROJECT_DIR$/biggu_scanner-1.1.0/biggu_scanner-1.1.0.iml" />
     </modules>
   </component>
 </project>

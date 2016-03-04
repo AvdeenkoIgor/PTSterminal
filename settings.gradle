@@ -1,1 +1,1 @@
-include ':app'
+include ':app', ':biggu_scanner-1.1.0'

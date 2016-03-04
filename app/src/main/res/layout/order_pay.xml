@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:background="#000000" >
+
+		<LinearLayout 
+		    android:layout_width="fill_parent"
+		    android:layout_height="match_parent"
+		    android:orientation="vertical" >
+
+		    <!-- Рисую линию для того, чтобы содержимое страницы было развёрнуто по всей ширине страницы -->	        	
+	  	    <ImageView
+		        android:id="@+id/line_item_image"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:src="@drawable/line" 
+			    android:scaleType="center" />
+	  	    	  	    		    			    	
+	  	    <!-- Поле для отображения оплачиваемой суммы -->	        	  	    	    	        
+		    <FrameLayout 
+		        android:layout_marginTop="2dp" 
+		        android:layout_width="fill_parent" 
+		        android:layout_height="40dp" 
+		        android:background="#FFFF00" > 
+		  	    <!-- Строка с номером, названием и ценой продукта -->	        	  	    	    	        
+			    <LinearLayout
+			        android:layout_width="fill_parent"
+			        android:layout_height="match_parent"
+			        android:orientation="horizontal" >
+
+			        <TextView
+			            android:id="@+id/idPaySumm"
+			            android:layout_width="match_parent"
+			            android:layout_height="fill_parent"
+			            android:layout_marginBottom="5dp"
+			            android:layout_marginTop="1dp"
+			            android:gravity="center_horizontal"
+			            android:text="53.24 грн."
+			            android:textColor="#000000"
+			            android:textSize="30dp"
+			            android:textStyle="bold"
+			            android:typeface="serif" />
+
+			    </LinearLayout>
+			</FrameLayout>
+
+		    <!-- Наборное поле для выбора формы оплаты -->
+
+		    <FrameLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="0dp"
+		        android:background="#535252" >
+ 
+			    <LinearLayout
+			        android:layout_width="fill_parent"
+			        android:layout_height="wrap_content"
+			        android:orientation="vertical" >
+
+			        <TextView
+			            android:id="@+id/TextViewPayForm"
+			            android:layout_width="fill_parent"
+			            android:layout_height="wrap_content"
+			            android:layout_margin="0dip"
+			            android:gravity="center_horizontal"
+			            android:text="@string/order_pay_form"
+			            android:textColor="#FFFFFF"
+			            android:textSize="24dp"
+			            android:typeface="serif"
+			            android:textStyle="bold" />
+
+			        <FrameLayout
+			            android:layout_width="match_parent"
+			            android:layout_height="wrap_content"
+			            android:layout_margin="1dp"
+			            android:layout_weight="0" >
+
+						<Spinner
+							android:id="@+id/SpinnerPayForm" 
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content"
+							android:layout_gravity="center_horizontal"
+							android:drawSelectorOnTop="true">
+						</Spinner>
+			        </FrameLayout>
+			    </LinearLayout>
+			</FrameLayout>
+			
+	  	    <!-- Поле для отображения заказанной дозы -->	        	  	    	    	        
+		    <FrameLayout
+		        android:layout_marginTop="0dp" 
+		        android:layout_width="fill_parent" 
+		        android:layout_height="60dp" 
+		        android:background="#646464" > 
+		  	    <!-- Строка с указанием типа заказа (литры/гривны) и полем ввода заказа продукта -->	        	  	    	    	        
+
+			    <LinearLayout
+			        android:layout_width="match_parent"
+			        android:layout_height="match_parent"
+			        android:orientation="horizontal" >
+
+			        <FrameLayout
+			            android:layout_width="235dp"
+			            android:layout_height="fill_parent"
+			            android:layout_gravity="center"
+			            android:layout_margin="5dp"
+			            android:layout_weight="0.46"
+			            android:background="#CCCCCC" >
+
+			            <TextView
+			                android:id="@+id/idEnteredCash"
+			                android:layout_width="fill_parent"
+			                android:layout_height="fill_parent"
+			                android:layout_gravity="center_vertical|center_horizontal"
+			                android:layout_marginRight="2dip"
+			                android:layout_weight="0"
+			                android:gravity="right"
+			                android:text="0"
+			                android:password="false"
+			                android:textColor="#000000"
+			                android:textSize="50dp"
+			                android:textStyle="bold" />
+			        </FrameLayout>
+			    </LinearLayout>
+
+		    </FrameLayout>
+
+		    <!-- Наборное поле для ввода пин-кода -->	        	  	    	    	        
+		    <FrameLayout 
+		        android:layout_marginTop="2dp" 
+		        android:layout_width="fill_parent" 
+		        android:layout_height="fill_parent" 
+		        > 
+			    <TableLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginTop="3dp">
+		            <!-- 1 2 3 OK -->
+	            	<TableRow android:gravity="center_vertical" >
+	            	   <Button
+	            	       android:id="@+id/button_1"
+	            	       style="@style/ButtonText"
+	            	       android:layout_width="0dp"
+	            	       android:layout_height="fill_parent"
+	            	       android:layout_margin="1dp"
+	            	       android:layout_weight="1"
+	            	       android:background="@drawable/style_button"
+	            	       android:text="@string/btn_1"
+	            	       android:textSize="32dp" />
+	            	   <Button
+	            	       android:id="@+id/button_2"
+	            	       style="@style/ButtonText"
+	            	       android:layout_width="0dp"
+	            	       android:layout_height="fill_parent"
+							android:layout_weight="1"
+	            	       android:layout_margin="1dp"
+	            	       android:background="@drawable/style_button"
+	            	       android:text="@string/btn_2"
+	            	       android:textSize="32dp" />
+			           <Button
+			               android:id="@+id/button_3"
+			               style="@style/ButtonText"
+	            	       android:layout_width="0dp"
+	            	       android:layout_height="fill_parent"
+							android:layout_weight="1"
+	            	       android:layout_margin="1dp"
+			               android:background="@drawable/style_button"
+			               android:text="@string/btn_3"
+			               android:textSize="32dp" />
+			           <Button
+			               android:id="@+id/button_enter"
+			               style="@style/ButtonText"
+	            	       android:layout_width="0dp"
+	            	       android:layout_height="wrap_content"
+							android:layout_weight="1"
+	            	       android:layout_margin="1dp"
+			               android:background="@drawable/style_button_enter"
+			               android:text="@string/btn_confirm"
+			               android:textSize="32dp" />
+			        </TableRow>
+			        <!-- 4 5 6 Back -->
+	            	<TableRow android:gravity="center_vertical" >
+	            	   <Button
+	            	       android:id="@+id/button_4"
+	            	       style="@style/ButtonText"
+	            	       android:layout_width="0dp"
+	            	       android:layout_height="wrap_content"
+							android:layout_weight="1"
+	            	       android:layout_margin="1dp"
+	            	       android:background="@drawable/style_button"
+	            	       android:text="@string/btn_4"
+	            	       android:textSize="32dp" />
+	            	   <Button
+	            	       android:id="@+id/button_5"
+	            	       style="@style/ButtonText"
+	            	       android:layout_width="0dp"
+	            	       android:layout_height="wrap_content"
+							android:layout_weight="1"
+	            	       android:layout_margin="1dp"
+	            	       android:background="@drawable/style_button"
+	            	       android:text="@string/btn_5"
+	            	       android:textSize="32dp" />
+			           <Button
+			               android:id="@+id/button_6"
+			               style="@style/ButtonText"
+	            	       android:layout_width="0dp"
+	            	       android:layout_height="wrap_content"
+							android:layout_weight="1"
+	            	       android:layout_margin="1dp"
+			               android:background="@drawable/style_button"
+			               android:text="@string/btn_6"
+			               android:textSize="32dp" />
+			           <Button
+			               android:id="@+id/button_clear"
+			               style="@style/ButtonText"
+	            	       android:layout_width="0dp"
+	            	       android:layout_height="wrap_content"
+							android:layout_weight="1"
+	            	       android:layout_margin="1dp"
+			               android:background="@drawable/style_button_back"
+			               android:text="@string/btn_C"
+			               android:textSize="32dp" />
+			           			           
+			        </TableRow>
+					<!-- 7 8 9 0 -->
+	            	<TableRow android:gravity="center_vertical" >
+	            	   <Button
+	            	       android:id="@+id/button_7"
+	            	       style="@style/ButtonText"
+	            	       android:layout_width="0dp"
+	            	       android:layout_height="wrap_content"
+							android:layout_weight="1"
+	            	       android:layout_margin="1dp"
+	            	       android:background="@drawable/style_button"
+	            	       android:text="@string/btn_7"
+	            	       android:textSize="32dp" />
+	            	   <Button
+	            	       android:id="@+id/button_8"
+	            	       style="@style/ButtonText"
+	            	       android:layout_width="0dp"
+	            	       android:layout_height="wrap_content"
+							android:layout_weight="1"
+	            	       android:layout_margin="1dp"
+	            	       android:background="@drawable/style_button"
+	            	       android:text="@string/btn_8"
+	            	       android:textSize="32dp" />
+			           <Button
+			               android:id="@+id/button_9"
+			               style="@style/ButtonText"
+	            	       android:layout_width="0dp"
+	            	       android:layout_height="wrap_content"
+							android:layout_weight="1"
+	            	       android:layout_margin="1dp"
+			               android:background="@drawable/style_button"
+			               android:text="@string/btn_9"
+			               android:textSize="32dp" />
+			           <Button
+			               android:id="@+id/button_0"
+			               style="@style/ButtonText"
+	            	       android:layout_width="0dp"
+	            	       android:layout_height="wrap_content"
+							android:layout_weight="1"
+	            	       android:layout_margin="1dp"
+			               android:background="@drawable/style_button"
+			               android:text="@string/btn_0point"
+			               android:textSize="32dp" />
+			           </TableRow>
+				</TableLayout>
+			</FrameLayout>
+		    		    
+			<!-- Поле для отображения кнопок "Отментить" "Оплатить" -->	        	  	    	    	        
+<!-- 		<FrameLayout
+		        android:layout_width="fill_parent" 
+		        android:layout_height="80dp" 
+		        android:layout_marginTop="1dp"
+		        android:background="#000000" > 
+				<LinearLayout 
+			        android:layout_height="wrap_content" 
+			        android:layout_width="fill_parent" 
+			        android:orientation="horizontal" 
+			        >
+
+		          	   <Button
+		          	       android:id="@+id/button_cancel"
+		          	       style="@style/ButtonText"
+		          	       android:layout_width="wrap_content"
+		          	       android:layout_height="wrap_content"
+		          	       android:layout_margin="5dp"
+		          	       android:layout_weight="1"
+		          	       android:background="@drawable/style_button"
+		          	       android:padding="10dp"
+		          	       android:text="@string/btn_cancel"
+		          	       android:textSize="25dp" />
+
+		          	   <Button
+		          	       android:id="@+id/button_pay"
+		          	       style="@style/ButtonText"
+		          	       android:layout_width="wrap_content"
+		          	       android:layout_height="wrap_content"
+		          	       android:layout_margin="5dp"
+		          	       android:layout_weight="1"
+		          	       android:background="@drawable/style_button"
+		          	       android:padding="10dp"
+		          	       android:text="@string/btn_pay"
+		          	       android:textSize="25dp" />
+
+				</LinearLayout>
+			</FrameLayout>
+ -->
+		</LinearLayout>
+
+	</FrameLayout>
+</LinearLayout>
+	    		
+	     
+
+	    
+    

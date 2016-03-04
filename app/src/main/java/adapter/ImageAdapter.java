@@ -1,6 +1,5 @@
 package adapter;
 
-import app.pts.terminal.R;
 import android.content.Context;
 import android.graphics.Color;
 import android.util.Log;
@@ -10,9 +9,10 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import app.pts.terminal.ArrayList_PTSMaster;
-import app.pts.terminal.ArrayList_PTSMaster.StatusPump;
-import app.pts.terminal.ArrayList_BasketData;
+import com.example.root.ptsterminal.ArrayList_PTSMaster;
+import com.example.root.ptsterminal.ArrayList_PTSMaster.StatusPump;
+import com.example.root.ptsterminal.ArrayList_BasketData;
+import com.example.root.ptsterminal.R;
 
 public class ImageAdapter extends BaseAdapter {
 

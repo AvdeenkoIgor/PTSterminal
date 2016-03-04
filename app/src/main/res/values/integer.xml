@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="ineger_name">10</integer>
+    <integer-array name="example_integer_array">
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </integer-array>
+
+    <integer name="state_unauthorized">0</integer>
+    <integer name="state_main_menu">1</integer>
+    <integer name="state_order_product">2</integer>
+    <integer name="state_select_product">3</integer>
+    <integer name="state_order_pay">4</integer>
+
+    <integer name="flags_basket_after_payment">1</integer>
+    <integer name="flags_basket_dispence_opened">2</integer>
+    <integer name="flags_basket_dispence_finis">4</integer>
+    <integer name="flags_basket_pay_ret">16</integer>
+    <integer name="flags_basket_after_split">32</integer>
+
+
+</resources>
