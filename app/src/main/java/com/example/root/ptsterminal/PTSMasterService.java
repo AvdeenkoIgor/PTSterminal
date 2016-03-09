@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.LockSupport;
 
-import org.apache.http.impl.conn.tsccm.WaitingThread;
+//import org.apache.http.impl.conn.tsccm.WaitingThread; //cannot resolve symbol
 
 import android.R.bool;
 import android.R.integer;

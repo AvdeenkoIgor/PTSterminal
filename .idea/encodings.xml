@@ -16,6 +16,7 @@
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/root/ptsterminal/BasketItem.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/root/ptsterminal/CardHolderItem.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/root/ptsterminal/ChequesItem.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/root/ptsterminal/ContactItem.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/root/ptsterminal/DispenserControlActivity.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/root/ptsterminal/GridViewActivity.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/root/ptsterminal/HolderRequestItem.java" charset="windows-1251" />
@@ -33,40 +34,22 @@
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/example/root/ptsterminal/myLib.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/alert_dialog_icon.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal0.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal0.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal1.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal1.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal10.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal10.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal11.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal11.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal12.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal12.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal13.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal13.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal14.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal14.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal15.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal15.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal16.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal16.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal17.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal17.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal2.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal2.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal3.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal3.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal4.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal4.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal5.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal5.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal6.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal6.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal7.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal7.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal8.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal8.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal9.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/animal9.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/biggu_corner_blue_ne.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/biggu_corner_blue_nw.png" charset="windows-1251" />
@@ -78,155 +61,80 @@
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/biggu_corner_green_sw.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/biggu_footer.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/button.PNG" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/button.PNG" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/button_clear.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/button_clear.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/button_desabled.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/button_desabled.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/button_normal.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/button_normal.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/button_pay.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/button_pay.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/button_pressed.PNG" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/button_pressed.PNG" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/button_start.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/button_start.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/button_stop.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/button_stop.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/cash_register_64x64.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/cash_register_64x64.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/clear.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/clear.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/clear_48x48.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/clear_48x48.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/clear_64x64.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/clear_64x64.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/clear_disable_48x48.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/clear_disable_48x48.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/close.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/close.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/credit_card_48x48.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/credit_card_48x48.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/credit_card_64x64.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/credit_card_64x64.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/dispcontrol_message_screen.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/dispcontrol_message_screen.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/droid.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/droid.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/key_pump_auth.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/key_pump_auth.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/key_pump_busy.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/key_pump_busy.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/key_pump_call.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/key_pump_call.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/key_pump_idle.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/key_pump_idle.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/key_pump_not_pay.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/key_pump_not_pay.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/key_pump_off.PNG" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/key_pump_off.PNG" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/key_pump_ordered.PNG" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/key_pump_ordered.PNG" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/key_pump_undefined.PNG" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/key_pump_undefined.PNG" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/key_pump_work.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/key_pump_work.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/line.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/new_button.xml" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/new_button.xml" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/none.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/none.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/nozzle_close.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/nozzle_close.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/nozzle_up.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/nozzle_up.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/ok_64x64.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/ok_64x64.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/order_info.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/order_info.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/order_info_0.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/order_info_0.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/order_info_1.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/order_info_1.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/order_info_2.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/order_info_2.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/order_screen.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/order_screen.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/oreder_sate_screen.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/oreder_sate_screen.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_athorize.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_athorize.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_control_ended.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_control_ended.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_control_need_nozzle.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_control_need_nozzle.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_control_nozzle_bad.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_control_nozzle_bad.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_control_permission_denied.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_control_permission_denied.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_control_ready.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_control_ready.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_control_work.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_control_work.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_main_idle.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_main_idle.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_main_nopayed.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_main_nopayed.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_main_order.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_main_order.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_main_pumpsoff.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_main_pumpsoff.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_main_work.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_main_work.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_order_enter.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_order_enter.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_order_enter_confirm.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_order_enter_confirm.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_pay.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_pay.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_pay_formpay.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_pay_formpay.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_select_product.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_select_product.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_select_product_nozzleup.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/page_select_product_nozzleup.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/payment_32x32.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/payment_32x32.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/payment_48x48.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/payment_48x48.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/payment_64x64.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/payment_64x64.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/payment_disable_48x48.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/payment_disable_48x48.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/petrol_price_yellow.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/petrol_price_yellow.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/play.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/play.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/run_64x64.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/run_64x64.png" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/server_offline.PNG" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/server_offline.PNG" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/server_online.PNG" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/server_online.PNG" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/style.xml" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/style.xml" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/style_button.xml" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/style_button.xml" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/style_button_back.xml" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/style_button_back.xml" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/style_button_close.xml" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/style_button_close.xml" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/style_button_enter.xml" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/style_button_enter.xml" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/style_button_pay.xml" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/style_button_pay.xml" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/title_line.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/title_line.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/user.jpg" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/user.jpg" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/work_info.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/work_info.png" charset="windows-1251" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/android_logo.jpg" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/dispenser_control.xml" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/grid_view.xml" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/main_menu.xml" charset="windows-1251" />

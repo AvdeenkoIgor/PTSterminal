@@ -18,12 +18,15 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import app.pts.terminal.ArrayList_PTSMaster;
-import app.pts.terminal.PTSMasterService;
-import app.pts.terminal.PTSTerminal;
-import app.pts.terminal.myLib;
-import app.pts.terminal.ArrayList_PTSMaster.StatusPump;
-import app.pts.terminal.R;
+import com.example.root.ptsterminal.ArrayList_PTSMaster;
+import com.example.root.ptsterminal.PTSMasterService;
+import com.example.root.ptsterminal.PTSTerminal;
+import com.example.root.ptsterminal.R;
+import com.example.root.ptsterminal.myLib;
+import com.example.root.ptsterminal.ArrayList_PTSMaster.StatusPump;
+//import app.pts.terminal.R; // unused
+
+
 
 public class SelectProductAdapter extends BaseAdapter {
 

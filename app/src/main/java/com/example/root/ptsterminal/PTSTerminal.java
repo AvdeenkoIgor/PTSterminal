@@ -136,7 +136,6 @@ public class PTSTerminal extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 //		tf = Typeface.createFromAsset(getAssets(), "times.ttf");
 //		TextView tv = (TextView) findViewById(R.id.idTextLogoTiT);
 //		tv.setTypeface(tf);
