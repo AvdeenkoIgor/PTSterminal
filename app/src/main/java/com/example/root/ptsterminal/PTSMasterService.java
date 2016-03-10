@@ -797,7 +797,7 @@ class PTSMaster_ConnectionTimerTimeout extends TimerTask
 	}
 	@Override
 	public void run() {
-		Log.d("PTSMaster_ConnectionTimerTimeout", "TIMEOUT");
+		Log.d("PTSMaster_ConnTimeT-out", "TIMEOUT");
 		if (connectionPTR.isAlive()) {
 			// -------------------------------- Ответ 
             Message msg = mHandler.obtainMessage();
@@ -1282,7 +1282,7 @@ class ReadThread extends Thread
 								for (int i = 0; i < this.receiveSemaphor.size(); i++) {
 									if (this.receiveSemaphor.get(i).idPacket == res.semaphor.idPacket)
 									{
-										Log.d(LOG_TAG, "Удаляю семафор. idPacket = " + res.semaphor.idPacket);
+										Log.d(LOG_TAG, "Уд-ю. сем-р idPacket = " + res.semaphor.idPacket);
 										this.receiveSemaphor.remove(i);
 										break;
 									}
