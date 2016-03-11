@@ -64,7 +64,7 @@ public class OrderPayActivity extends Activity
 	private String messagePaid;
 
 	String[] listPayForms;
-//	final String[] listPayForms = {"Наличные", "Карта QR-code", "Карта RFID"};
+//	final String[] listPayForms = {"РќР°Р»РёС‡РЅС‹Рµ", "РљР°СЂС‚Р° QR-code", "РљР°СЂС‚Р° RFID"};
 	private String idPayFormName;
 	private int idPayFormNumber;
 	
@@ -529,7 +529,7 @@ public class OrderPayActivity extends Activity
         intent.setClass(this, PTSMasterClientActivity.class);
 //		intent.putExtra("idClerk", idClerk);
 		intent.putExtra("function", PTSMasterService.FUNC_BASKETPAYMENT);
-		// эапускаем деятельнсть
+		// СЌР°РїСѓСЃРєР°РµРј РґРµСЏС‚РµР»СЊРЅСЃС‚СЊ
 		startActivityForResult(intent, IDM_REQUEST_PAYMENT);
     }
  
@@ -540,7 +540,7 @@ public class OrderPayActivity extends Activity
         intent.setClass(this, PTSMasterClientActivity.class);
 //		intent.putExtra("idClerk", idClerk);
 		intent.putExtra("function", PTSMasterService.FUNC_BASKETCLOSE);
-		// эапускаем деятельнсть
+		// СЌР°РїСѓСЃРєР°РµРј РґРµСЏС‚РµР»СЊРЅСЃС‚СЊ
 		startActivityForResult(intent, IDM_REQUEST_BASKETCLOSE);
     }
  
@@ -579,9 +579,9 @@ public class OrderPayActivity extends Activity
 //                case PTSMASTER_ORDERCONFIRM:
 //                	break;
                 case IDM_REQUEST_PAYMENT:
-                	// Оплачено клиентом
+                	// РћРїР»Р°С‡РµРЅРѕ РєР»РёРµРЅС‚РѕРј
                 	paySum = Double.valueOf(PTSTerminal.ptsMaster.PaymentAnswer.getPaySum());
-                	// Требуется к оплате
+                	// РўСЂРµР±СѓРµС‚СЃСЏ Рє РѕРїР»Р°С‚Рµ
                 	itemSum = Double.valueOf(PTSTerminal.ptsMaster.PaymentAnswer.getItemSum()); 
                 	if (paySum < itemSum) {
                 		different = myLib.round((itemSum - paySum), 2, BigDecimal.ROUND_HALF_UP);
@@ -595,7 +595,7 @@ public class OrderPayActivity extends Activity
     				Log.v("OrderProductActivity", "paySum: " + paySum);
     				Log.v("OrderProductActivity", "itemSum: " + itemSum);
                 	if (paySum > itemSum) {
-        				Log.v("OrderProductActivity", "Заказ оплачен\nНеобходимо дать сдачу: " + (paySum - itemSum));
+        				Log.v("OrderProductActivity", "Р—Р°РєР°Р· РѕРїР»Р°С‡РµРЅ\nРќРµРѕР±С…РѕРґРёРјРѕ РґР°С‚СЊ СЃРґР°С‡Сѓ: " + (paySum - itemSum));
     		        	messagePaid = getResources().getText(R.string.textOrderHasBeenPaid) + "\n"
     							+ getResources().getText(R.string.textNeedCashback) + " " + String.valueOf(cashback) + " " + getResources().getText(R.string.textOrderProductSummUnit) + "\n\n";
                 	}
@@ -607,16 +607,16 @@ public class OrderPayActivity extends Activity
                     		messagePaid = getResources().getText(R.string.textOrderNotHasBeenPaid) + "\n\n";
                     	}
                 	}
-    		    	// ================================================================ Диалоговое окно
+    		    	// ================================================================ Р”РёР°Р»РѕРіРѕРІРѕРµ РѕРєРЅРѕ
     		        AlertDialog.Builder alertbox = new AlertDialog.Builder(this);
     		        
-    		        // Заголовок и текст
+    		        // Р—Р°РіРѕР»РѕРІРѕРє Рё С‚РµРєСЃС‚
     		        alertbox.setTitle(R.string.title_order_paid);
     		        String TextToast = null;
     		        	TextToast = messagePaid;
     		        alertbox.setMessage(TextToast);
     		        
-    		        // Добавляем кнопку 
+    		        // Р”РѕР±Р°РІР»СЏРµРј РєРЅРѕРїРєСѓ 
     		        alertbox.setPositiveButton(R.string.btn_confirm, new DialogInterface.OnClickListener() {
     		            @Override
 	    				public void onClick(DialogInterface arg0, int arg1) {
@@ -633,7 +633,7 @@ public class OrderPayActivity extends Activity
                     	}
     		        });
 
-    		        // показываем окно
+    		        // РїРѕРєР°Р·С‹РІР°РµРј РѕРєРЅРѕ
     		        alertbox.show();
     		        // ================================================================     	
     		        break;

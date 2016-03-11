@@ -10,7 +10,7 @@ public class ArrayList_ProductAssortment extends HashMap<String, String> {
     public static final String unitName =	"unitName";			//--Product unit name
     public static final String price =		"price";			//--Product price
     public static final String type =		"type";				//--Product type Goods = 0 , Service = 1 , Dispense = 2 , Ingredient = 3 , Compound = 4 , Pack = 5
-    public static final String rest =		"rest";				//--ŒÒÚ‡ÚÓÍ
+    public static final String rest =		"rest";				//--–û—Å—Ç–∞—Ç–æ–∫
   
     public ArrayList_ProductAssortment(String ARTICLEID, String NAME, String SHORTNAME, String UNITNAME, String PRICE, String TYPE, String REST) {
         super();

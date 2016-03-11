@@ -2,7 +2,7 @@ package com.example.root.ptsterminal;
 
 import java.util.HashMap;
 //
-// не знаю для чего использовать
+// РЅРµ Р·РЅР°СЋ РґР»СЏ С‡РµРіРѕ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ
 //
 public class ContactItem extends HashMap<String, String> {
     private static final long serialVersionUID = 1L;

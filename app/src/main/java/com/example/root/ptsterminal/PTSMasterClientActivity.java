@@ -57,7 +57,7 @@ public class PTSMasterClientActivity extends Activity  {
 
     private static final int DIALOG_OK_ERROR = 1;
     final String LOG_TAG = "ClientActivity_Log";
-	// Создание объектов для запуска сервиса PTSMasterService
+	// РЎРѕР·РґР°РЅРёРµ РѕР±СЉРµРєС‚РѕРІ РґР»СЏ Р·Р°РїСѓСЃРєР° СЃРµСЂРІРёСЃР° PTSMasterService
 //    Intent intentService;
 
 //    private Messaging messagingClient;
@@ -125,7 +125,7 @@ public class PTSMasterClientActivity extends Activity  {
 //	        mListDispenser = new ArrayList<ArrayList_Dispenser>();
 //	        mListOrder = new ArrayList<ArrayList_Order>();
 	        
-			/* Установка конвейеров */
+			/* РЈСЃС‚Р°РЅРѕРІРєР° РєРѕРЅРІРµР№РµСЂРѕРІ */
 //	        final PipedOutputStream pout1 = new PipedOutputStream();
 //	        final PipedInputStream pin1 = new PipedInputStream(pout1);
 //	        final PipedOutputStream pout2 = new PipedOutputStream();
@@ -164,7 +164,7 @@ public class PTSMasterClientActivity extends Activity  {
 			                function = msg.getData().getInt("function");
 		            	}
 		                if (result == funcPTSMaster.STATUS_PACKAGE_OK){
-			                // --- Данные приняты
+			                // --- Р”Р°РЅРЅС‹Рµ РїСЂРёРЅСЏС‚С‹
 			        		switch (function) {
 			        		case PTSMasterService.FUNC_CLERCLIST:
 //			        			Log.d("Client function", "clerkList");
@@ -295,9 +295,9 @@ public class PTSMasterClientActivity extends Activity  {
 			int fileId = 0;
 //			Log.i("deviceId", deviceId);
 			
-//	        // создаем BroadcastReceiver
+//	        // СЃРѕР·РґР°РµРј BroadcastReceiver
 //	        br = new BroadcastReceiver() {
-//	          // действия при получении сообщений
+//	          // РґРµР№СЃС‚РІРёСЏ РїСЂРё РїРѕР»СѓС‡РµРЅРёРё СЃРѕРѕР±С‰РµРЅРёР№
 //	          public void onReceive(Context context, Intent intent) {
 ////	          	String nameTask = intent.getStringExtra(PTSMasterService.PARAM_RECEIVERNAME);
 ////	          	if (!nameTask.equals(BC_CLIENT)) {
@@ -323,7 +323,7 @@ public class PTSMasterClientActivity extends Activity  {
 //	    		            	case PTSMasterService.RESULT_DAMAGED:
 //	    		                	Toast.makeText(getApplicationContext(), "DAMAGED", Toast.LENGTH_SHORT).show();
 //	    		        	        Log.e("ClientResult", "RESULT_DAMAGED");
-//	    							// -------------------------------- Ответ 
+//	    							// -------------------------------- РћС‚РІРµС‚ 
 //	    				            Message msg = mHandler.obtainMessage();
 //	    				            Bundle b = new Bundle();
 //	    				            b.putInt("ptsMasterAnswer", funcPTSMaster.STATUS_DAMAGED);
@@ -342,12 +342,12 @@ public class PTSMasterClientActivity extends Activity  {
 //	    		}
 //	          }
 //	        };
-//	        // создаем фильтр для BroadcastReceiver
+//	        // СЃРѕР·РґР°РµРј С„РёР»СЊС‚СЂ РґР»СЏ BroadcastReceiver
 //	        IntentFilter intFilt = new IntentFilter(BC_CLIENT);
-//	        // регистрируем (включаем) BroadcastReceiver
+//	        // СЂРµРіРёСЃС‚СЂРёСЂСѓРµРј (РІРєР»СЋС‡Р°РµРј) BroadcastReceiver
 //	        registerReceiver(br, intFilt);
 			
-//	        // ---------------------------------- Добавляю заголовок  
+//	        // ---------------------------------- Р”РѕР±Р°РІР»СЏСЋ Р·Р°РіРѕР»РѕРІРѕРє  
 //			funcPTSMaster.createPtsMasterMess(buff, request, partId);
 //			buffLength = 9; 
 //		    RequestType request = RequestType.getType(exchange.toString());
@@ -355,7 +355,7 @@ public class PTSMasterClientActivity extends Activity  {
 ////		    Log.i("CardCode", mListCardOperator.get(0).getCardCode());
 ////			Log.i("CardPin", mListCardOperator.get(0).getCardPin());
 //			// ========================================================================================================================================================
-//			//																	СОСТАВЛЕНИЕ ПАКЕТОВ EXCHANGE  
+//			//																	РЎРћРЎРўРђР’Р›Р•РќРР• РџРђРљР•РўРћР’ EXCHANGE  
 //			// ========================================================================================================================================================
 //		    switch(request) {
 //		        case API_OPEN:
@@ -368,18 +368,18 @@ public class PTSMasterClientActivity extends Activity  {
 //		        funcFinish();
 //	        }
 //	        Log.i("PTSMasterClient", "Header create begin");
-////	        // ---------------------------------- Добавляю заголовок и расчитываю MD5-сумму с добавлением её в конец пакета 
+////	        // ---------------------------------- Р”РѕР±Р°РІР»СЏСЋ Р·Р°РіРѕР»РѕРІРѕРє Рё СЂР°СЃС‡РёС‚С‹РІР°СЋ MD5-СЃСѓРјРјСѓ СЃ РґРѕР±Р°РІР»РµРЅРёРµРј РµС‘ РІ РєРѕРЅРµС† РїР°РєРµС‚Р° 
 ////			createUdtHeader(buff, 1, deviceId, buffLength, fileId, partId);
-////			buffLength += 16;// добавляю размер MD5-суммы 
+////			buffLength += 16;// РґРѕР±Р°РІР»СЏСЋ СЂР°Р·РјРµСЂ MD5-СЃСѓРјРјС‹ 
 //			
-//	        // ---------------------------------- Активизирую связь с сервером  
+//	        // ---------------------------------- РђРєС‚РёРІРёР·РёСЂСѓСЋ СЃРІСЏР·СЊ СЃ СЃРµСЂРІРµСЂРѕРј  
 //            messagingClient = new Messaging(mHandler, buff, buffLength);
 //            messagingClient.start();
 //
-//            // ---------------------------------- Запускаю таймер времени работы UDT-клиента  
+//            // ---------------------------------- Р—Р°РїСѓСЃРєР°СЋ С‚Р°Р№РјРµСЂ РІСЂРµРјРµРЅРё СЂР°Р±РѕС‚С‹ UDT-РєР»РёРµРЅС‚Р°  
 //            timer = new Timer("PTSMaster_TimerTimeout");
 //            TimerTask task = new PTSMaster_TimerTimeout(mHandler);
-//            // Устанавливаю время ожидания соединения (в милисекундах) 
+//            // РЈСЃС‚Р°РЅР°РІР»РёРІР°СЋ РІСЂРµРјСЏ РѕР¶РёРґР°РЅРёСЏ СЃРѕРµРґРёРЅРµРЅРёСЏ (РІ РјРёР»РёСЃРµРєСѓРЅРґР°С…) 
 //            timer.schedule( task, 15000 );
 	        
 //		    Log.i("DispenserPrice",PTSTerminal.ptsMaster.mListDispenser.get(0).getDispenserOrder_price());
@@ -398,8 +398,8 @@ public class PTSMasterClientActivity extends Activity  {
 //			}
 //	        int buffOrderLength = myLib.getIntFromByteArray(buffOrder, 0, funcPTSMaster.DATA_LEN_i) + 4;
 
-//		    // Создаем Intent для вызова сервиса, кладем туда имя объекта для приёма ответа (PARAM_RECEIVERNAME), 
-//		    // параметр времени и код задачи
+//		    // РЎРѕР·РґР°РµРј Intent РґР»СЏ РІС‹Р·РѕРІР° СЃРµСЂРІРёСЃР°, РєР»Р°РґРµРј С‚СѓРґР° РёРјСЏ РѕР±СЉРµРєС‚Р° РґР»СЏ РїСЂРёС‘РјР° РѕС‚РІРµС‚Р° (PARAM_RECEIVERNAME), 
+//		    // РїР°СЂР°РјРµС‚СЂ РІСЂРµРјРµРЅРё Рё РєРѕРґ Р·Р°РґР°С‡Рё
 //	        intentService = new Intent(PTSMasterClientActivity.this, PTSMasterService.class)
 //		    	.putExtra(PTSMasterService.PARAM_RECEIVERNAME, PTSTerminal.BC_PTSTERMINAL)
 //		    	.putExtra(PTSMasterService.PARAM_ARRAY, PTSTerminal.ptsMaster )
@@ -408,7 +408,7 @@ public class PTSMasterClientActivity extends Activity  {
 //		    	.putExtra(PTSMasterService.PARAM_FUNCTION, requestFunction)
 //		    	.putExtra(PTSMasterService.PARAM_OWNER, "Client")
 //		        .putExtra(PTSMasterService.PARAM_TASK, PTSTerminal.PTSMASTER_TASK);
-//		    // стартуем сервис
+//		    // СЃС‚Р°СЂС‚СѓРµРј СЃРµСЂРІРёСЃ
 //		    startService(intentService);
 
 	        Log.d(LOG_TAG, "!!!***********!!! sConn = new ServiceConnection()!!!");
@@ -446,8 +446,8 @@ public class PTSMasterClientActivity extends Activity  {
 		      startTask(0);
 		    
 		      
-		    // Создаем Intent для вызова сервиса, кладем туда имя объекта для приёма ответа (PARAM_RECEIVERNAME), 
-		    // параметр времени и код задачи
+		    // РЎРѕР·РґР°РµРј Intent РґР»СЏ РІС‹Р·РѕРІР° СЃРµСЂРІРёСЃР°, РєР»Р°РґРµРј С‚СѓРґР° РёРјСЏ РѕР±СЉРµРєС‚Р° РґР»СЏ РїСЂРёС‘РјР° РѕС‚РІРµС‚Р° (PARAM_RECEIVERNAME), 
+		    // РїР°СЂР°РјРµС‚СЂ РІСЂРµРјРµРЅРё Рё РєРѕРґ Р·Р°РґР°С‡Рё
 //	        intentService = new Intent(this, PTSMasterService.class)
 //		    	.putExtra(PTSMasterService.PARAM_RECEIVERNAME, PTSTerminal.BC_PTSTERMINAL)
 //		    	.putExtra(PTSMasterService.PARAM_ID_PACKET, PTSTerminal.ptsMaster.id )
@@ -456,7 +456,7 @@ public class PTSMasterClientActivity extends Activity  {
 //		    	.putExtra(PTSMasterService.PARAM_FUNCTION, requestFunction)
 //		    	.putExtra(PTSMasterService.PARAM_OWNER, "Client")
 //		        .putExtra(PTSMasterService.PARAM_TASK, PTSTerminal.PTSMASTER_TASK);
-//		    // стартуем сервис
+//		    // СЃС‚Р°СЂС‚СѓРµРј СЃРµСЂРІРёСЃ
 //	        Log.d("intentService", "Start " + intentService);
 //		    startService(intentService);
 	                
@@ -513,12 +513,12 @@ public class PTSMasterClientActivity extends Activity  {
     }
 
     // #####################################################################################################
-    //	Задача периодического опроса POS-сервера 
+    //	Р—Р°РґР°С‡Р° РїРµСЂРёРѕРґРёС‡РµСЃРєРѕРіРѕ РѕРїСЂРѕСЃР° POS-СЃРµСЂРІРµСЂР° 
     // #####################################################################################################
     public void startTask(int timeoutValue) {
     	
         timer = new Timer("TimerStartService");
-		task = new TimerTask() { // Определяем задачу
+		task = new TimerTask() { // РћРїСЂРµРґРµР»СЏРµРј Р·Р°РґР°С‡Сѓ
 			@Override
 			public void run() {
 				
@@ -588,7 +588,7 @@ public class PTSMasterClientActivity extends Activity  {
 			        					);
 		        }
 		        else {
-		        	Log.e(LOG_TAG, "!!!=====================!!!Ошибка подключения к сервису!!!");
+		        	Log.e(LOG_TAG, "!!!=====================!!!РћС€РёР±РєР° РїРѕРґРєР»СЋС‡РµРЅРёСЏ Рє СЃРµСЂРІРёСЃСѓ!!!");
 	                pleaseWaitDialog.dismiss();
 	                if (mess != null) {
 	                	ptrService.cancelTask(mess);
@@ -598,7 +598,7 @@ public class PTSMasterClientActivity extends Activity  {
 		        }
 			};
 		};
-        // Устанавливаю время: через сколько будет запущена задача task (в милисекундах) 
+        // РЈСЃС‚Р°РЅР°РІР»РёРІР°СЋ РІСЂРµРјСЏ: С‡РµСЂРµР· СЃРєРѕР»СЊРєРѕ Р±СѓРґРµС‚ Р·Р°РїСѓС‰РµРЅР° Р·Р°РґР°С‡Р° task (РІ РјРёР»РёСЃРµРєСѓРЅРґР°С…) 
         timer.schedule( task, timeoutValue );
     }
     

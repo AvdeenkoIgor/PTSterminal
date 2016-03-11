@@ -123,7 +123,7 @@ public class OrderSelectProductActivity extends Activity {
    	}
     	
 	// #####################################################################################################
-	// Запуск активности заказа продукта 
+	// Р—Р°РїСѓСЃРє Р°РєС‚РёРІРЅРѕСЃС‚Рё Р·Р°РєР°Р·Р° РїСЂРѕРґСѓРєС‚Р° 
 	// #####################################################################################################
     public void startOrderProduct(int position) {
         PTSTerminal.productAdapter.stopTimer();
@@ -132,12 +132,12 @@ public class OrderSelectProductActivity extends Activity {
     	intent.setClass(this, OrderProductActivity.class);
 		intent.putExtra("pump", orderDispenser);
 		intent.putExtra("nozzle", position);
-    	// эапускаем деятельнсть 
+    	// СЌР°РїСѓСЃРєР°РµРј РґРµСЏС‚РµР»СЊРЅСЃС‚СЊ 
     	startActivityForResult(intent, PAGE_ORDER_PRODUCT);
     }
 
 	// #####################################################################################################
-	// Анализ ответа активности 
+	// РђРЅР°Р»РёР· РѕС‚РІРµС‚Р° Р°РєС‚РёРІРЅРѕСЃС‚Рё 
 	// #####################################################################################################
     protected void onActivityResult(
             int requestCode, int resultCode, Intent data) {

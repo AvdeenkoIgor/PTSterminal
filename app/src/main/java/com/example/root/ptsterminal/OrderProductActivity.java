@@ -338,7 +338,7 @@ public class OrderProductActivity extends Activity {
 						amount = fullTank;
 					}
 					else {
-						// Конвертация деньги-литры
+						// РљРѕРЅРІРµСЂС‚Р°С†РёСЏ РґРµРЅСЊРіРё-Р»РёС‚СЂС‹
 						price = Double.valueOf(orderProductPrice);
 						if (idProductUnit.getText().toString().equals(getString(R.string.order_unit_money))) {
 							if (price > 0.0) {
@@ -378,7 +378,7 @@ public class OrderProductActivity extends Activity {
 	}
 
 //	// #####################################################################################################
-//	// Запуск активности оплаты заказа
+//	// Р—Р°РїСѓСЃРє Р°РєС‚РёРІРЅРѕСЃС‚Рё РѕРїР»Р°С‚С‹ Р·Р°РєР°Р·Р°
 //	// #####################################################################################################
 //    public void startPayment(int dispenser, int nozzle) {
 //    	intent = new Intent();
@@ -386,27 +386,27 @@ public class OrderProductActivity extends Activity {
 //		intent.putExtra("pump", dispenser);
 //		intent.putExtra("nozzle", nozzle);
 //        intent.putExtra("amount", idProductAmount.getText().toString()); 
-//    	// эапускаем деятельнсть 
+//    	// СЌР°РїСѓСЃРєР°РµРј РґРµСЏС‚РµР»СЊРЅСЃС‚СЊ 
 //    	startActivityForResult(intent, PAGE_ORDER_PAY);
 //    }
  
 	// #####################################################################################################
-	// Добавление заказа в корзину
+	// Р”РѕР±Р°РІР»РµРЅРёРµ Р·Р°РєР°Р·Р° РІ РєРѕСЂР·РёРЅСѓ
 	// #####################################################################################################
 	public void addBasket() {
 		intent = new Intent();
 		intent.setClass(this, PTSMasterClientActivity.class);
 		intent.putExtra("function", PTSMasterService.FUNC_BASKETADD);
-		// эапускаем деятельнсть
+		// СЌР°РїСѓСЃРєР°РµРј РґРµСЏС‚РµР»СЊРЅСЃС‚СЊ
 		startActivityForResult(intent, PTSMASTER_ADDBASKET);
 	}
 
 	// #####################################################################################################
-	// Добавление заказа в корзину
+	// Р”РѕР±Р°РІР»РµРЅРёРµ Р·Р°РєР°Р·Р° РІ РєРѕСЂР·РёРЅСѓ
 	// #####################################################################################################
     private void showOrderConfirm () {
     	
-    	// ================================================================ Диалоговое окно
+    	// ================================================================ Р”РёР°Р»РѕРіРѕРІРѕРµ РѕРєРЅРѕ
         AlertDialog.Builder alertbox = new AlertDialog.Builder(this);
         
         if (amount == 0) {
@@ -414,7 +414,7 @@ public class OrderProductActivity extends Activity {
 			showDialog(DIALOG_OK_ERROR);
 			return;
         }
-        // Заголовок и текст
+        // Р—Р°РіРѕР»РѕРІРѕРє Рё С‚РµРєСЃС‚
         alertbox.setTitle(R.string.title_order_confirm);
         String TextToast = null;
         if (amount == fullTank) {
@@ -428,11 +428,11 @@ public class OrderProductActivity extends Activity {
         }
         alertbox.setMessage(TextToast);
         
-        // Добавляем кнопку 
+        // Р”РѕР±Р°РІР»СЏРµРј РєРЅРѕРїРєСѓ 
         alertbox.setPositiveButton(R.string.btn_confirm, new DialogInterface.OnClickListener() {
             @Override
 			public void onClick(DialogInterface arg0, int arg1) {
-                // закрываем текущюю Activity
+                // Р·Р°РєСЂС‹РІР°РµРј С‚РµРєСѓС‰СЋСЋ Activity
 //		        PTSTerminal.ptsMaster.OrderBasketItem.volume = 0.0;
 //		        PTSTerminal.ptsMaster.OrderBasketItem.utag = 0;
 //		        PTSTerminal.ptsMaster.OrderBasketItem.time = 0;
@@ -464,14 +464,14 @@ public class OrderProductActivity extends Activity {
             }
         });
 
-        // Добавляем кнопку 
+        // Р”РѕР±Р°РІР»СЏРµРј РєРЅРѕРїРєСѓ 
         alertbox.setNegativeButton(R.string.btn_cancel, new DialogInterface.OnClickListener() {
             @Override
 			public void onClick(DialogInterface arg0, int arg1) {
             }
         });
 
-        // показываем окно
+        // РїРѕРєР°Р·С‹РІР°РµРј РѕРєРЅРѕ
         alertbox.show();
      // ================================================================     	
     }

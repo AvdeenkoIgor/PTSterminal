@@ -3,14 +3,14 @@ package com.example.root.ptsterminal;
 import java.util.HashMap;
 
 public class ArrayList_Dispenser extends HashMap<String, String> {
-    public static final String index 			= "index";   		//--ÕÓÏÂ Á‡Ô‡‚Ó˜ÌÓ„Ó ÏÂÒÚ‡ 
-    public static final String status 			= "status";   		//--“ÂÍÛ˘ËÈ ÒÚ‡ÚÛÒ (ArrayList_PTSMaster -> enum statusPump)
-    public static final String nozzle 			= "nozzle";   		//--“ÂÍÛ˘ËÈ ÔËÒÚÓÎÂÚ 
-    public static final String volume 			= "volume";   		//--“ÂÍÛ˘‡ˇ ‰ÓÁ‡
-    public static final String order		 	= "order";			//--—ÓÒÚÓˇÌËÂ Á‡Í‡Á‡ (NoOrder = 0 ,	BasketOrder = 1 ,	CheckOrder(œÓ‚ÂÍ‡) = 2) 
-    public static final String order_volume 	= "order_volume";   //--ƒÓÁ‡ Á‡Í‡Á‡
-    public static final String order_nozzle 	= "order_nozzle";   //--œËÒÚÓÎÂÚ ËÁ Á‡Í‡Á‡
-    public static final String basket 			= "basket";   		//--ÕÓÏÂ ÍÓÁËÌ˚
+    public static final String index 			= "index";   		//--–ù–æ–º–µ—Ä –∑–∞–ø—Ä–∞–≤–æ—á–Ω–æ–≥–æ –º–µ—Å—Ç–∞ 
+    public static final String status 			= "status";   		//--–¢–µ–∫—É—â–∏–π —Å—Ç–∞—Ç—É—Å (ArrayList_PTSMaster -> enum statusPump)
+    public static final String nozzle 			= "nozzle";   		//--–¢–µ–∫—É—â–∏–π –ø–∏—Å—Ç–æ–ª–µ—Ç 
+    public static final String volume 			= "volume";   		//--–¢–µ–∫—É—â–∞—è –¥–æ–∑–∞
+    public static final String order		 	= "order";			//--–°–æ—Å—Ç–æ—è–Ω–∏–µ –∑–∞–∫–∞–∑–∞ (NoOrder = 0 ,	BasketOrder = 1 ,	CheckOrder(–ü–æ–≤–µ—Ä–∫–∞) = 2) 
+    public static final String order_volume 	= "order_volume";   //--–î–æ–∑–∞ –∑–∞–∫–∞–∑–∞
+    public static final String order_nozzle 	= "order_nozzle";   //--–ü–∏—Å—Ç–æ–ª–µ—Ç –∏–∑ –∑–∞–∫–∞–∑–∞
+    public static final String basket 			= "basket";   		//--–ù–æ–º–µ—Ä –∫–æ—Ä–∑–∏–Ω—ã
 	
     public ArrayList_Dispenser(
     		String INDEX,         

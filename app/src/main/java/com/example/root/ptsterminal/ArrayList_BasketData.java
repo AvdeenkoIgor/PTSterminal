@@ -6,27 +6,27 @@ import android.R.bool;
 
 public class ArrayList_BasketData {
 
-    /**Номер корзины*/
+    /**РќРѕРјРµСЂ РєРѕСЂР·РёРЅС‹*/
 	public int basket;
-    /**Количество товарных позиций*/
+    /**РљРѕР»РёС‡РµСЃС‚РІРѕ С‚РѕРІР°СЂРЅС‹С… РїРѕР·РёС†РёР№*/
 	public int itemCount;
-    /**Количество оплат*/
+    /**РљРѕР»РёС‡РµСЃС‚РІРѕ РѕРїР»Р°С‚*/
 	public int payCount;
-    /**Уникальный идентификатор продажи*/
+    /**РЈРЅРёРєР°Р»СЊРЅС‹Р№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїСЂРѕРґР°Р¶Рё*/
 	public int tag;
-    /**Сумма товарных позиций*/
+    /**РЎСѓРјРјР° С‚РѕРІР°СЂРЅС‹С… РїРѕР·РёС†РёР№*/
 	public double itemSum;
-    /**Сумма оплат*/
+    /**РЎСѓРјРјР° РѕРїР»Р°С‚*/
 	public double paySum;
-    /**Номер чека/ Если чек не закрыт = -1*/
+    /**РќРѕРјРµСЂ С‡РµРєР°/ Р•СЃР»Рё С‡РµРє РЅРµ Р·Р°РєСЂС‹С‚ = -1*/
 	public int billNum;
-    /**Код кассира*/
+    /**РљРѕРґ РєР°СЃСЃРёСЂР°*/
 	public int clerk;
-    /**Флаги*/
+    /**Р¤Р»Р°РіРё*/
 	public int flags;
-    /**Количество элементов*/
+    /**РљРѕР»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚РѕРІ*/
 	public int size;
-    /**Пустая корзина*/
+    /**РџСѓСЃС‚Р°СЏ РєРѕСЂР·РёРЅР°*/
 	public bool isEmpty;
     public ArrayList<ArrayList_BasketItems> basketItem;
     
@@ -55,24 +55,24 @@ public class ArrayList_BasketData {
 	}
 	//---------------------------------------------------
 	/******************************
-	* discountType - Тип скидки.
+	* discountType - РўРёРї СЃРєРёРґРєРё.
 	*******************************/
 	class DiscountTypeEnum {
-	    public static final int SingleOpPerc = 0;		//	процентная скидка на последнюю товарную операцию.
-	    public static final int SingleOpSum = 1;		//	суммовая скидка на последнюю товарную операцию.
-	    public static final int SubtotPerc = 2;			//	процентная скидка на промежуточный итог.
-	    public static final int SubtotSum = 3;			//	суммовая скидка на промежуточный итог.
+	    public static final int SingleOpPerc = 0;		//	РїСЂРѕС†РµРЅС‚РЅР°СЏ СЃРєРёРґРєР° РЅР° РїРѕСЃР»РµРґРЅСЋСЋ С‚РѕРІР°СЂРЅСѓСЋ РѕРїРµСЂР°С†РёСЋ.
+	    public static final int SingleOpSum = 1;		//	СЃСѓРјРјРѕРІР°СЏ СЃРєРёРґРєР° РЅР° РїРѕСЃР»РµРґРЅСЋСЋ С‚РѕРІР°СЂРЅСѓСЋ РѕРїРµСЂР°С†РёСЋ.
+	    public static final int SubtotPerc = 2;			//	РїСЂРѕС†РµРЅС‚РЅР°СЏ СЃРєРёРґРєР° РЅР° РїСЂРѕРјРµР¶СѓС‚РѕС‡РЅС‹Р№ РёС‚РѕРі.
+	    public static final int SubtotSum = 3;			//	СЃСѓРјРјРѕРІР°СЏ СЃРєРёРґРєР° РЅР° РїСЂРѕРјРµР¶СѓС‚РѕС‡РЅС‹Р№ РёС‚РѕРі.
 	}
 	//---------------------------------------------------
 	/******************************
-	* itemType - Тип элемента товарной корзины.
+	* itemType - РўРёРї СЌР»РµРјРµРЅС‚Р° С‚РѕРІР°СЂРЅРѕР№ РєРѕСЂР·РёРЅС‹.
 	*******************************/
 	class ItemTypeEnum {
-	    public static final int GoodsItemType = 0;		//	Товар.
-	    public static final int DispenseItemType = 1;	//	Топливо
-	    public static final int DiscountItemType = 2;	//	Скидка
-	    public static final int CommentItemType = 3;	//	Коментарий
-	    public static final int PaymentItemType = 4;	//	Оплата
+	    public static final int GoodsItemType = 0;		//	РўРѕРІР°СЂ.
+	    public static final int DispenseItemType = 1;	//	РўРѕРїР»РёРІРѕ
+	    public static final int DiscountItemType = 2;	//	РЎРєРёРґРєР°
+	    public static final int CommentItemType = 3;	//	РљРѕРјРµРЅС‚Р°СЂРёР№
+	    public static final int PaymentItemType = 4;	//	РћРїР»Р°С‚Р°
 	}
 	//---------------------------------------------------
 

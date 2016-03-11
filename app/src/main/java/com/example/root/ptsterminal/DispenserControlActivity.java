@@ -233,20 +233,20 @@ public class DispenserControlActivity extends Activity {
 	}
 	
 	public void showWarning() {
-    	// ================================================================ Диалоговое окно
+    	// ================================================================ Р”РёР°Р»РѕРіРѕРІРѕРµ РѕРєРЅРѕ
         AlertDialog.Builder alertbox = new AlertDialog.Builder(this);
-        // Заголовок и текст
+        // Р—Р°РіРѕР»РѕРІРѕРє Рё С‚РµРєСЃС‚
         alertbox.setTitle(R.string.title_warning);
         String TextToast = null;
     	TextToast = getResources().getText(R.string.textImposiblePayFullTank) + "\n\n";
         alertbox.setMessage(TextToast);
-        // Добавляем кнопку 
+        // Р”РѕР±Р°РІР»СЏРµРј РєРЅРѕРїРєСѓ 
         alertbox.setNeutralButton(R.string.btn_ok, new DialogInterface.OnClickListener() {
             @Override
 			public void onClick(DialogInterface arg0, int arg1) {
             }
         });
-        // показываем окно
+        // РїРѕРєР°Р·С‹РІР°РµРј РѕРєРЅРѕ
         alertbox.show();
      // ================================================================     	
 	}
@@ -302,7 +302,7 @@ public class DispenserControlActivity extends Activity {
 						else {
 							idOrderProductAmount.setText(String.format("%5.2f", orderVolume).replace(',', '.'));
 						}
-						// Заказ неоплачен
+						// Р—Р°РєР°Р· РЅРµРѕРїР»Р°С‡РµРЅ
 						if ((PTSTerminal.ptsMasterStatic.mListBasket.get(i).basketItem.get(n).flags & getResources().getInteger(R.integer.flags_basket_after_payment)) == 0) {
 							button_pay_Enable();
 //		                	button_pay.setClickable(true);
@@ -317,9 +317,9 @@ public class DispenserControlActivity extends Activity {
 //		                	button_pay.setBackgroundDrawable(getResources().getDrawable(R.drawable.style_button));
 //		                	button_pay.setImageDrawable(getResources().getDrawable(R.drawable.payment_disable_48x48));
 						}
-						// Отпуск продукта окончен
+						// РћС‚РїСѓСЃРє РїСЂРѕРґСѓРєС‚Р° РѕРєРѕРЅС‡РµРЅ
 						if ((PTSTerminal.ptsMasterStatic.mListBasket.get(i).basketItem.get(n).flags & getResources().getInteger(R.integer.flags_basket_dispence_finis)) > 0) {
-							// Проверяю заказ на "Полный бак"
+							// РџСЂРѕРІРµСЂСЏСЋ Р·Р°РєР°Р· РЅР° "РџРѕР»РЅС‹Р№ Р±Р°Рє"
 							if ((orderVolume >= 99999.0) || (orderVolume == 0)) {
 //								button_start.setClickable(true);
 //			                	button_start.setTextColor(Color.parseColor("#FFFFFF"));
@@ -327,21 +327,21 @@ public class DispenserControlActivity extends Activity {
 			                	analizNozzlesStatus(i, n);
 							}
 							else {
-								// Что такое "+ 0,05" ?
-								// Допустим заказано 5.00 литров
-								// При остановке отпуска на значении 4.95 и выше - принимаю решение о завершении отпуска 
+								// Р§С‚Рѕ С‚Р°РєРѕРµ "+ 0,05" ?
+								// Р”РѕРїСѓСЃС‚РёРј Р·Р°РєР°Р·Р°РЅРѕ 5.00 Р»РёС‚СЂРѕРІ
+								// РџСЂРё РѕСЃС‚Р°РЅРѕРІРєРµ РѕС‚РїСѓСЃРєР° РЅР° Р·РЅР°С‡РµРЅРёРё 4.95 Рё РІС‹С€Рµ - РїСЂРёРЅРёРјР°СЋ СЂРµС€РµРЅРёРµ Рѕ Р·Р°РІРµСЂС€РµРЅРёРё РѕС‚РїСѓСЃРєР° 
 								if ((volume + 0.05) < orderVolume) {
 //									button_start.setClickable(true);
 //				                	button_start.setTextColor(Color.parseColor("#FFFFFF"));
 //				                	button_start.setBackgroundDrawable(getResources().getDrawable(R.drawable.style_button_enter));
 				                	analizNozzlesStatus(i, n);
 								}
-								else {// Отпущено столько, сколько было заказано
+								else {// РћС‚РїСѓС‰РµРЅРѕ СЃС‚РѕР»СЊРєРѕ, СЃРєРѕР»СЊРєРѕ Р±С‹Р»Рѕ Р·Р°РєР°Р·Р°РЅРѕ
 									button_start_Disable();
 //									button_start.setClickable(false);
 //				                	button_start.setTextColor(Color.parseColor("#7A7E85"));
 //				                	button_start.setBackgroundDrawable(getResources().getDrawable(R.drawable.style_button));
-									// Заказ неоплачен
+									// Р—Р°РєР°Р· РЅРµРѕРїР»Р°С‡РµРЅ
 									if ((PTSTerminal.ptsMasterStatic.mListBasket.get(i).basketItem.get(n).flags & getResources().getInteger(R.integer.flags_basket_after_payment)) == 0) { 
 										idImageNozzleStatus.setImageDrawable(getResources().getDrawable(R.drawable.payment_64x64));
 										idTextDispenserControlMessage.setText(getResources().getText(R.string.messErrror_need_order_pay));
@@ -363,13 +363,13 @@ public class DispenserControlActivity extends Activity {
 //		                	button_start.setBackgroundDrawable(getResources().getDrawable(R.drawable.style_button_enter));
 		                	analizNozzlesStatus(i, n);
 //							orderEnded = false;
-//							// Не поднит ни один пистолет 
+//							// РќРµ РїРѕРґРЅРёС‚ РЅРё РѕРґРёРЅ РїРёСЃС‚РѕР»РµС‚ 
 //							if (Integer.valueOf(PTSTerminal.ptsMasterStatic.mListDispenser.get(orderDispenser).getDispenserNozzle()) == -1) {
 //								idImageNozzleStatus.setImageDrawable(getResources().getDrawable(R.drawable.nozzle_close));
 //								idTextDispenserControlMessage.setText(getResources().getText(R.string.messErrror_need_nozzle_up));
 //							}
 //							else {
-//								// Поднят пистолет, нужно сравнить номера заказанного и поднятого пистолетов 
+//								// РџРѕРґРЅСЏС‚ РїРёСЃС‚РѕР»РµС‚, РЅСѓР¶РЅРѕ СЃСЂР°РІРЅРёС‚СЊ РЅРѕРјРµСЂР° Р·Р°РєР°Р·Р°РЅРЅРѕРіРѕ Рё РїРѕРґРЅСЏС‚РѕРіРѕ РїРёСЃС‚РѕР»РµС‚РѕРІ 
 //								if (Integer.valueOf(PTSTerminal.ptsMasterStatic.mListDispenser.get(orderDispenser).getDispenserNozzle()) == PTSTerminal.ptsMasterStatic.mListBasket.get(i).basketItem.get(n).nozzle) {
 //									if (Integer.valueOf(PTSTerminal.ptsMasterStatic.mListDispenser.get(orderDispenser).getDispenserOrder()) > 0) {
 //										idImageNozzleStatus.setImageDrawable(getResources().getDrawable(R.drawable.run_64x64));
@@ -397,9 +397,9 @@ public class DispenserControlActivity extends Activity {
 //				}
 			}
 		}
-		// В корзинах продукт не найден - значит по этому продукту заказ окончен и оплачен!!!
+		// Р’ РєРѕСЂР·РёРЅР°С… РїСЂРѕРґСѓРєС‚ РЅРµ РЅР°Р№РґРµРЅ - Р·РЅР°С‡РёС‚ РїРѕ СЌС‚РѕРјСѓ РїСЂРѕРґСѓРєС‚Сѓ Р·Р°РєР°Р· РѕРєРѕРЅС‡РµРЅ Рё РѕРїР»Р°С‡РµРЅ!!!
 		if (!productFined) {
-			Log.d("updateView", "ЗАКАЗ ВЫПОЛНЕН!!!");
+			Log.d("updateView", "Р—РђРљРђР— Р’Р«РџРћР›РќР•Рќ!!!");
 			button_start_Disable();
 //			button_start.setClickable(false);
 //        	button_start.setTextColor(Color.parseColor("#7A7E85"));
@@ -422,7 +422,7 @@ public class DispenserControlActivity extends Activity {
     }
 
     private void analizNozzlesStatus(int basketNumber, int itemInBasketNumber) {
-		// Не поднит ни один пистолет 
+		// РќРµ РїРѕРґРЅРёС‚ РЅРё РѕРґРёРЅ РїРёСЃС‚РѕР»РµС‚ 
 		if (Integer.valueOf(PTSTerminal.ptsMasterStatic.mListDispenser.get(orderDispenser).getDispenserNozzle()) == -1) {
 			idImageNozzleStatus.setImageDrawable(getResources().getDrawable(R.drawable.nozzle_close));
 			idTextDispenserControlMessage.setText(getResources().getText(R.string.messErrror_need_nozzle_up));
@@ -433,7 +433,7 @@ public class DispenserControlActivity extends Activity {
 //        	button_start.setBackgroundDrawable(getResources().getDrawable(R.drawable.style_button));
 		}
 		else {
-			// Поднят пистолет, нужно сравнить номера заказанного и поднятого пистолетов 
+			// РџРѕРґРЅСЏС‚ РїРёСЃС‚РѕР»РµС‚, РЅСѓР¶РЅРѕ СЃСЂР°РІРЅРёС‚СЊ РЅРѕРјРµСЂР° Р·Р°РєР°Р·Р°РЅРЅРѕРіРѕ Рё РїРѕРґРЅСЏС‚РѕРіРѕ РїРёСЃС‚РѕР»РµС‚РѕРІ 
 			if (Integer.valueOf(PTSTerminal.ptsMasterStatic.mListDispenser.get(orderDispenser).getDispenserNozzle()) == PTSTerminal.ptsMasterStatic.mListBasket.get(basketNumber).basketItem.get(itemInBasketNumber).nozzle) {
 				if (Integer.valueOf(PTSTerminal.ptsMasterStatic.mListDispenser.get(orderDispenser).getDispenserOrder()) > 0) {
 					idImageNozzleStatus.setImageDrawable(getResources().getDrawable(R.drawable.run_64x64));
@@ -543,12 +543,12 @@ public class DispenserControlActivity extends Activity {
     	summ = "0.0";
 		if ((orderVolume >= 99999.0) || (orderVolume == 0)) {
 //			summ = idProductSumm.getText().toString();
-			// Если оплачено меньше, чем отпущено (т.е. необходимо оплачивать заказ) 
+			// Р•СЃР»Рё РѕРїР»Р°С‡РµРЅРѕ РјРµРЅСЊС€Рµ, С‡РµРј РѕС‚РїСѓС‰РµРЅРѕ (С‚.Рµ. РЅРµРѕР±С…РѕРґРёРјРѕ РѕРїР»Р°С‡РёРІР°С‚СЊ Р·Р°РєР°Р·) 
 			if (paySum < Double.valueOf(idProductSumm.getText().toString())) {
 				summ = String.valueOf(Double.valueOf(idProductSumm.getText().toString()) - paySum);
 			}
 			else {
-				Log.i("DispenserControlAct-ty", "Заказ оплачен\nНеобходимо дать сдачу: " + (paySum - Double.valueOf(idProductSumm.getText().toString())));
+				Log.i("DispenserControlAct-ty", "Р—Р°РєР°Р· РѕРїР»Р°С‡РµРЅ\nРќРµРѕР±С…РѕРґРёРјРѕ РґР°С‚СЊ СЃРґР°С‡Сѓ: " + (paySum - Double.valueOf(idProductSumm.getText().toString())));
 			}
 		}
 		else {
@@ -556,7 +556,7 @@ public class DispenserControlActivity extends Activity {
 				summ = String.valueOf(itemSum - paySum);
 			}
 			else {
-				Log.i("DispenserControlAct-ty", "Заказ оплачен\nНеобходимо дать сдачу: " + (paySum - itemSum));
+				Log.i("DispenserControlAct-ty", "Р—Р°РєР°Р· РѕРїР»Р°С‡РµРЅ\nРќРµРѕР±С…РѕРґРёРјРѕ РґР°С‚СЊ СЃРґР°С‡Сѓ: " + (paySum - itemSum));
 			}
 		}
 //		if (summ.equals("0.0")) {
@@ -568,7 +568,7 @@ public class DispenserControlActivity extends Activity {
 			intent.putExtra("summ", summ);
 			intent.putExtra("basket", orderBasket);
 	    	intent.setClass(this, OrderPayActivity.class);
-	    	// эапускаем деятельнсть 
+	    	// СЌР°РїСѓСЃРєР°РµРј РґРµСЏС‚РµР»СЊРЅСЃС‚СЊ 
 	    	startActivityForResult(intent, PAGE_ORDER_PAY);
 		}
     }
@@ -585,7 +585,7 @@ public class DispenserControlActivity extends Activity {
 		intent = new Intent();
         intent.setClass(this, PTSMasterClientActivity.class);
 		intent.putExtra("function", PTSMasterService.FUNC_PUMPRESUME);
-		// эапускаем деятельнсть
+		// СЌР°РїСѓСЃРєР°РµРј РґРµСЏС‚РµР»СЊРЅСЃС‚СЊ
 		startActivityForResult(intent, PAGE_PUMP_RESUME);
     }
  
@@ -596,7 +596,7 @@ public class DispenserControlActivity extends Activity {
         intent.setClass(this, PTSMasterClientActivity.class);
 //		intent.putExtra("idClerk", idClerk);
 		intent.putExtra("function", PTSMasterService.FUNC_BASKETCLEAR);
-		// эапускаем деятельнсть
+		// СЌР°РїСѓСЃРєР°РµРј РґРµСЏС‚РµР»СЊРЅСЃС‚СЊ
 		startActivityForResult(intent, PAGE_REQUEST_BASKETCLEAR);
     }
  
@@ -607,7 +607,7 @@ public class DispenserControlActivity extends Activity {
         intent.setClass(this, PTSMasterClientActivity.class);
 //		intent.putExtra("idClerk", idClerk);
 		intent.putExtra("function", PTSMasterService.FUNC_BASKETCLOSE);
-		// эапускаем деятельнсть
+		// СЌР°РїСѓСЃРєР°РµРј РґРµСЏС‚РµР»СЊРЅСЃС‚СЊ
 		startActivityForResult(intent, PAGE_REQUEST_BASKETCLOSE);
     }
  
@@ -617,7 +617,7 @@ public class DispenserControlActivity extends Activity {
 		intent = new Intent();
         intent.setClass(this, PTSMasterClientActivity.class);
 		intent.putExtra("function", PTSMasterService.FUNC_PUMPSTOP);
-		// эапускаем деятельнсть
+		// СЌР°РїСѓСЃРєР°РµРј РґРµСЏС‚РµР»СЊРЅСЃС‚СЊ
 		startActivityForResult(intent, PAGE_PUMP_STOP);
     }
  

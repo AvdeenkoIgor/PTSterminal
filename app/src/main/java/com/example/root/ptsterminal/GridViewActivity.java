@@ -146,7 +146,7 @@ public class GridViewActivity extends Activity {
     	intent = new Intent();
     	intent.setClass(this, OrderSelectProductActivity.class);
 		intent.putExtra("pump", position);
-    	// эапускаем деятельнсть 
+    	// СЌР°РїСѓСЃРєР°РµРј РґРµСЏС‚РµР»СЊРЅСЃС‚СЊ 
     	startActivityForResult(intent, PAGE_SELECT_PRODUCT);
     }
  
@@ -156,7 +156,7 @@ public class GridViewActivity extends Activity {
     	intent.setClass(this, OrderProductActivity.class);
 		intent.putExtra("pump", position);
 		intent.putExtra("nozzle", Integer.valueOf(PTSTerminal.ptsMaster.mListDispenser.get(position).getDispenserNozzle()));
-    	// эапускаем деятельнсть 
+    	// СЌР°РїСѓСЃРєР°РµРј РґРµСЏС‚РµР»СЊРЅСЃС‚СЊ 
     	startActivityForResult(intent, PAGE_ORDER_PRODUCT);
     }
  
@@ -167,7 +167,7 @@ public class GridViewActivity extends Activity {
 		intent.putExtra("pump", position);
 //		intent.putExtra("nozzle", Integer.valueOf(PTSTerminal.ptsMaster.mListDispenser.get(position).getDispenserNozzle()));
     	intent.setClass(this, DispenserControlActivity.class);
-    	// эапускаем деятельнсть 
+    	// СЌР°РїСѓСЃРєР°РµРј РґРµСЏС‚РµР»СЊРЅСЃС‚СЊ 
     	startActivityForResult(intent, PAGE_DISPENSER_CONTROL);
     }
  

@@ -106,8 +106,8 @@ public class myLib {
 
 	public static void testFunc(byte[] data, int offset) {
 //  	HashMap<String, Integer> myMap = new HashMap<String, Integer>();
-//  	myMap.put("Строка", 12345);
-//  	int y = myMap.get("Строка");
+//  	myMap.put("РЎС‚СЂРѕРєР°", 12345);
+//  	int y = myMap.get("РЎС‚СЂРѕРєР°");
 //  	byte[] buff = new byte[2*1024];
 		byte[] buff = data;
 		char hexData[] = {

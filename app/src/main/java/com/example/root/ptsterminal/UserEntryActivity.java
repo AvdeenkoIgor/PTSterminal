@@ -274,20 +274,20 @@ public class UserEntryActivity extends Activity implements AdapterView.OnItemSel
 //        btnOK.setOnClickListener(new View.OnClickListener() {         
 //            @Override
 //            public void onClick(View v) {
-////            	// Создание объектов для запуска сервиса PTSMasterService
+////            	// РЎРѕР·РґР°РЅРёРµ РѕР±СЉРµРєС‚РѕРІ РґР»СЏ Р·Р°РїСѓСЃРєР° СЃРµСЂРІРёСЃР° PTSMasterService
 ////                PendingIntent pi;
 ////                Intent intent;
 ////                pi = createPendingResult(PTSMASTER_TASK_API_OPEN, null, 0);
 ////                intent = new Intent(GetCardPinActivity.this, PTSMasterService.class)
 ////                	.putExtra(PTSMasterService.PARAM_TIME, 6)
 ////                    .putExtra(PTSMasterService.PARAM_PINTENT, pi);
-////                // Запуск сервиса PTSMasterService
+////                // Р—Р°РїСѓСЃРє СЃРµСЂРІРёСЃР° PTSMasterService
 ////                startService(intent);
 //
 ////            	startService(new Intent(GetCardPinActivity.this, PTSMasterService.class).putExtra("time", 10));
 ////            	Log.d("Hadler", "PTSTerminal.hActivity = " + PTSTerminal.hActivity);
 ////            	if (!(mCard.getText().toString().equals("")) && !(mPin.getText().toString().equals(""))) {
-//            		// --- Передача через intent данных о номере карты и пин-коде в вызвавшую активность  
+//            		// --- РџРµСЂРµРґР°С‡Р° С‡РµСЂРµР· intent РґР°РЅРЅС‹С… Рѕ РЅРѕРјРµСЂРµ РєР°СЂС‚С‹ Рё РїРёРЅ-РєРѕРґРµ РІ РІС‹Р·РІР°РІС€СѓСЋ Р°РєС‚РёРІРЅРѕСЃС‚СЊ  
 //					intent = new Intent();
 ////					intent.putExtra("Card", mCard.getText().toString());
 ////					intent.putExtra("Pin", mPin.getText().toString());
@@ -297,7 +297,7 @@ public class UserEntryActivity extends Activity implements AdapterView.OnItemSel
 ////              	PTSTerminal.mListCardOperator.add(new OperatorItem(mCard.getText().toString(), mPin.getText().toString()));
 ////  				Intent intent = new Intent(v.getContext(), UdtClientActivity.class);
 ////                  intent.putExtra("Exchange", 0);
-////                  // эапускаем деятельнсть
+////                  // СЌР°РїСѓСЃРєР°РµРј РґРµСЏС‚РµР»СЊРЅСЃС‚СЊ
 ////                  startActivityForResult(intent, IDM_REQUEST_AUTHORIZATION);
 ////            	}
 ////            	else {
@@ -346,7 +346,7 @@ public class UserEntryActivity extends Activity implements AdapterView.OnItemSel
 		intent.putExtra("idClerk", idClerk);
 		intent.putExtra("passClerk", pinCode.getText().toString());
 		intent.putExtra("function", PTSMasterService.FUNC_CLERCREG);
-		// эапускаем деятельнсть
+		// СЌР°РїСѓСЃРєР°РµРј РґРµСЏС‚РµР»СЊРЅСЃС‚СЊ
 		startActivityForResult(intent, IDM_REQUEST_AUTHORIZATION);
     }
  

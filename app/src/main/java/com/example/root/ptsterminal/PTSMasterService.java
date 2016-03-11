@@ -151,7 +151,7 @@ public class PTSMasterService extends Service {
 //    checkConnection();
 //    readThreadClient.start();
 
-    // Получение параметров 
+    // РџРѕР»СѓС‡РµРЅРёРµ РїР°СЂР°РјРµС‚СЂРѕРІ 
 //    int task = intent.getIntExtra(PARAM_TASK, 0);
 //    byte buffOrder[] = intent.getByteArrayExtra(PARAM_ORDER_BUFF);
 //    int buffOrderLength = intent.getIntExtra(PARAM_ORDER_BUFF_LENGTH, 0);
@@ -161,10 +161,10 @@ public class PTSMasterService extends Service {
 //    Log.i("onStartCommand", "owner = " + owner);
 //    Log.i("buffOrder", "0x" + myLib.byteArrayToHexString(buffOrder, buffOrderLength));
 
-    // Создание объекта сервиса 
+    // РЎРѕР·РґР°РЅРёРµ РѕР±СЉРµРєС‚Р° СЃРµСЂРІРёСЃР° 
 //    MyRun mr = new MyRun(startId, owner, function, task, buffOrder, buffOrderLength, idPacket);
 //    MyRun mr = new MyRun(time, startId, pi);
-    // Запуск сервиса 
+    // Р—Р°РїСѓСЃРє СЃРµСЂРІРёСЃР° 
 //    es.execute(mr);
     return super.onStartCommand(intent, flags, startId);
   }
@@ -184,7 +184,7 @@ public class PTSMasterService extends Service {
 //	Timer timer = new Timer("ConnectionTimerTimeout");
 //	connection = new prepareConnection(mHandlerConnect, receiveName, owner, task, timer);
 //	  
-//	// ---------------------------------- Запускаю таймер времени работы UDT-клиента  
+//	// ---------------------------------- Р—Р°РїСѓСЃРєР°СЋ С‚Р°Р№РјРµСЂ РІСЂРµРјРµРЅРё СЂР°Р±РѕС‚С‹ UDT-РєР»РёРµРЅС‚Р°  
 //	TimerTask taskConnect = new PTSMaster_ConnectionTimerTimeout(mHandlerConnect, connection);
 //	// 
 //	connection.start();
@@ -197,7 +197,7 @@ public class PTSMasterService extends Service {
 //		connection = new prepareConnection(mHandlerConnect, receiveName, owner, task, timer);
 		connection = new prepareConnection(mHandlerConnect, timer);
 		  
-		// ---------------------------------- Запускаю таймер времени работы UDT-клиента  
+		// ---------------------------------- Р—Р°РїСѓСЃРєР°СЋ С‚Р°Р№РјРµСЂ РІСЂРµРјРµРЅРё СЂР°Р±РѕС‚С‹ UDT-РєР»РёРµРЅС‚Р°  
 		TimerTask taskConnect = new PTSMaster_ConnectionTimerTimeout(mHandlerConnect, connection);
 		// 
 		connectionState = "unknown";
@@ -241,7 +241,7 @@ public class PTSMasterService extends Service {
 //	  }
 	  
 	  if (!setConnection()) {
-			// -------------------------------- Ответ 
+			// -------------------------------- РћС‚РІРµС‚ 
 			Message msg = mHandler.obtainMessage();
 			Bundle b = new Bundle();
 			b.putInt(PTSMasterService.PARAM_THREADRESULT, funcPTSMaster.STATUS_NOCONNECT);
@@ -259,7 +259,7 @@ public class PTSMasterService extends Service {
 //			Timer timer = new Timer("ConnectionTimerTimeout");
 //			connection = new prepareConnection(mHandlerConnect, receiveName, owner, task, timer);
 //			  
-//			// ---------------------------------- Запускаю таймер времени работы UDT-клиента  
+//			// ---------------------------------- Р—Р°РїСѓСЃРєР°СЋ С‚Р°Р№РјРµСЂ РІСЂРµРјРµРЅРё СЂР°Р±РѕС‚С‹ UDT-РєР»РёРµРЅС‚Р°  
 //			TimerTask taskConnect = new PTSMaster_ConnectionTimerTimeout(mHandlerConnect, connection);
 //			// 
 //			connection.start();
@@ -295,21 +295,21 @@ public class PTSMasterService extends Service {
 	  }
 	  
 	Timer timer = new Timer("PTSMaster_TimerTimeout" + idPacket);
-	// ---------------------------------- Активизирую связь с сервером  
+	// ---------------------------------- РђРєС‚РёРІРёР·РёСЂСѓСЋ СЃРІСЏР·СЊ СЃ СЃРµСЂРІРµСЂРѕРј  
 	messagingClient = new Messaging(mHandler, receiveName, owner, function, task, idPacket, buffOrder, buffOrderLength, requestMessage, timer);
 	
 	if (function == FUNC_POSCLIENT) {
 		messagingClient.start();
 	}
 	else {
-		// ---------------------------------- Запускаю таймер времени работы UDT-клиента  
+		// ---------------------------------- Р—Р°РїСѓСЃРєР°СЋ С‚Р°Р№РјРµСЂ РІСЂРµРјРµРЅРё СЂР°Р±РѕС‚С‹ UDT-РєР»РёРµРЅС‚Р°  
 		TimerTask taskSend = new PTSMaster_TimerTimeout(mHandler, messagingClient);
 		
 	//	  idPacketList.add(idPacket);
 		  receiveSemaphor.add(new ArrayList_ReceiveSemaphor(owner, task, function, idPacket, receiveName, timer)); //( String owner, int task, int function, int idPacket, String receiveName);
 		  Log.d(LOG_TAG, "receiveSemaphor size: " + receiveSemaphor.size());
 		  readThreadClient.setSemaphor(receiveSemaphor);
-		// Устанавливаю время ожидания соединения (в милисекундах) 
+		// РЈСЃС‚Р°РЅР°РІР»РёРІР°СЋ РІСЂРµРјСЏ РѕР¶РёРґР°РЅРёСЏ СЃРѕРµРґРёРЅРµРЅРёСЏ (РІ РјРёР»РёСЃРµРєСѓРЅРґР°С…) 
 		messagingClient.start();
 		timer.schedule( taskSend, 15000 );
 	}
@@ -347,12 +347,12 @@ public class PTSMasterService extends Service {
 //  }
   
   // #####################################################################################################
-  //	Задача периодического опроса состояния подключения  
+  //	Р—Р°РґР°С‡Р° РїРµСЂРёРѕРґРёС‡РµСЃРєРѕРіРѕ РѕРїСЂРѕСЃР° СЃРѕСЃС‚РѕСЏРЅРёСЏ РїРѕРґРєР»СЋС‡РµРЅРёСЏ  
   // #####################################################################################################
   public void checkConnection() {
   	
 		timerCheckConnection = new Timer("TimerCheckConnection");
-		TimerTask task = new TimerTask() { // Определяем задачу
+		TimerTask task = new TimerTask() { // РћРїСЂРµРґРµР»СЏРµРј Р·Р°РґР°С‡Сѓ
 			@Override
 			public void run() {
 
@@ -361,7 +361,7 @@ public class PTSMasterService extends Service {
 
 			};
 		};
-      // Устанавливаю время: через сколько будет запущена задача task (в милисекундах) 
+      // РЈСЃС‚Р°РЅР°РІР»РёРІР°СЋ РІСЂРµРјСЏ: С‡РµСЂРµР· СЃРєРѕР»СЊРєРѕ Р±СѓРґРµС‚ Р·Р°РїСѓС‰РµРЅР° Р·Р°РґР°С‡Р° task (РІ РјРёР»РёСЃРµРєСѓРЅРґР°С…) 
 		timerCheckConnection.schedule( task, 0, 5000 );
   }
   
@@ -405,14 +405,14 @@ public class PTSMasterService extends Service {
 	    			receiveName = msg.getData().getString(PARAM_RECEIVERNAME);
 	    			idPacket = msg.getData().getInt(PARAM_ID_PACKET);
 	    			Intent intent = new Intent(receiveName);
-					// --- Данные приняты
+					// --- Р”Р°РЅРЅС‹Рµ РїСЂРёРЅСЏС‚С‹
 					int ptsMasterOffset = 0;
 
 					byte buffResult[] = msg.getData().getByteArray(PTSMasterService.PARAM_RESULT_BUFF);
 					
 					if (buffResult == null) {
 						Log.e(LOG_TAG, "Parsing - NULL");
-						// сообщаем о пакете без данных 
+						// СЃРѕРѕР±С‰Р°РµРј Рѕ РїР°РєРµС‚Рµ Р±РµР· РґР°РЅРЅС‹С… 
 						intent.putExtra(PARAM_TASK, task);
 						intent.putExtra(PARAM_OWNER, owner);
 						intent.putExtra(PARAM_FUNCTION, function);
@@ -421,11 +421,11 @@ public class PTSMasterService extends Service {
 						sendBroadcast(intent);
 					}
 					else {
-//        					Log.d(LOG_TAG, "Принят пакет: " + myLib.byteArrayToHexString(buffResult, buffResult.length));
+//        					Log.d(LOG_TAG, "РџСЂРёРЅСЏС‚ РїР°РєРµС‚: " + myLib.byteArrayToHexString(buffResult, buffResult.length));
 						// ========================================================================================================================================================
-						//																	ПАРСИНГ 
+						//																	РџРђР РЎРРќР“ 
 						// ========================================================================================================================================================
-						// сообщаем об успехе 
+						// СЃРѕРѕР±С‰Р°РµРј РѕР± СѓСЃРїРµС…Рµ 
 						intent.putExtra(PARAM_TASK, task);
 						intent.putExtra(PARAM_OWNER, owner);
 						intent.putExtra(PARAM_FUNCTION, function);
@@ -441,7 +441,7 @@ public class PTSMasterService extends Service {
 					byte buffResult[] = msg.getData().getByteArray(PTSMasterService.PARAM_RESULT_BUFF);
 	    			task = msg.getData().getInt(PARAM_TASK);
 	    			Intent intent = new Intent(PTSTerminal.BC_PTSTERMINAL);
-					// сообщаем о таймауте 
+					// СЃРѕРѕР±С‰Р°РµРј Рѕ С‚Р°Р№РјР°СѓС‚Рµ 
 					intent.putExtra(PARAM_TASK, task);
 					intent.putExtra(PARAM_RESULT_BUFF, buffResult);
 					intent.putExtra(PARAM_RESULT_BUFF_LENGTH, buffResult.length);
@@ -449,7 +449,7 @@ public class PTSMasterService extends Service {
 				}
 				if (resultThread == funcPTSMaster.STATUS_DAMAGED) {
 					Log.e(LOG_TAG, "Parsing - STATUS_DAMAGED");
-//    					// сообщаем о неправильном пакете  
+//    					// СЃРѕРѕР±С‰Р°РµРј Рѕ РЅРµРїСЂР°РІРёР»СЊРЅРѕРј РїР°РєРµС‚Рµ  
 //    					intent.putExtra(PARAM_TASK, task);
 //    					intent.putExtra(PARAM_OWNER, owner);
 //    					intent.putExtra(PARAM_FUNCTION, function);
@@ -466,7 +466,7 @@ public class PTSMasterService extends Service {
 	    			Intent intent = new Intent(receiveName);
 					Log.e(LOG_TAG, "Parsing - STATUS_TIMEOUT");
 //    	        		Log.e(LOG_TAG, "Parsing - STATUS_TIMEOUT");
-					// сообщаем о таймауте 
+					// СЃРѕРѕР±С‰Р°РµРј Рѕ С‚Р°Р№РјР°СѓС‚Рµ 
 					intent.putExtra(PARAM_TASK, task);
 					intent.putExtra(PARAM_OWNER, owner);
 					intent.putExtra(PARAM_FUNCTION, function);
@@ -476,7 +476,7 @@ public class PTSMasterService extends Service {
 					for (int z = 0; z < receiveSemaphor.size(); z++) {
 						if (receiveSemaphor.get(z).idPacket == idPacket)
 						{
-							Log.d(LOG_TAG, "<TIMEOUT> Удаляю семафор. idPacket = " + idPacket);
+							Log.d(LOG_TAG, "<TIMEOUT> РЈРґР°Р»СЏСЋ СЃРµРјР°С„РѕСЂ. idPacket = " + idPacket);
 							receiveSemaphor.remove(z);
 							break;
 						}
@@ -492,7 +492,7 @@ public class PTSMasterService extends Service {
 					Log.e(LOG_TAG, "Parsing - STATUS_NOCONNECT");
 					connectionState = "noConnection";
 //    	         		Log.e(LOG_TAG, "Parsing - STATUS_NOCONNECT");
-					// сообщаем о NOCONNECT 
+					// СЃРѕРѕР±С‰Р°РµРј Рѕ NOCONNECT 
 					intent.putExtra(PARAM_TASK, task);
 					intent.putExtra(PARAM_OWNER, owner);
 					intent.putExtra(PARAM_FUNCTION, function);
@@ -513,7 +513,7 @@ public class PTSMasterService extends Service {
 //    						readThreadClient.start();
 //    					}
 ////    	         		Log.e(LOG_TAG, "Parsing - STATUS_NOCONNECT");
-//    					// сообщаем о NOCONNECT 
+//    					// СЃРѕРѕР±С‰Р°РµРј Рѕ NOCONNECT 
 //    					intent.putExtra(PARAM_TASK, task);
 //    					intent.putExtra(PARAM_OWNER, owner);
 //    					intent.putExtra(PARAM_FUNCTION, function);
@@ -532,7 +532,7 @@ public class PTSMasterService extends Service {
 //    	        		Toast.makeText(getApplicationContext(), "TimerTask-run", Toast.LENGTH_SHORT).show();
 				}
 //    			else {
-//    				Log.w(LOG_TAG, "По этому пакету уже ответ был выслан ранее: idPacket = " + idPacket);
+//    				Log.w(LOG_TAG, "РџРѕ СЌС‚РѕРјСѓ РїР°РєРµС‚Сѓ СѓР¶Рµ РѕС‚РІРµС‚ Р±С‹Р» РІС‹СЃР»Р°РЅ СЂР°РЅРµРµ: idPacket = " + idPacket);
 //    			}
     		}
     	}
@@ -560,7 +560,7 @@ public class PTSMasterService extends Service {
 					Log.i(LOG_TAG, "Connection - <<<OK>>>");
 					connectionState = "ConnectOK";
 //				    readThreadClient.start();
-//					// сообщаем о таймауте 
+//					// СЃРѕРѕР±С‰Р°РµРј Рѕ С‚Р°Р№РјР°СѓС‚Рµ 
 //					intent.putExtra(PARAM_TASK, task);
 //					intent.putExtra(PARAM_OWNER, owner);
 //					intent.putExtra(PARAM_SERVICESTATUS, STATUS_IN_WORK);
@@ -572,7 +572,7 @@ public class PTSMasterService extends Service {
 					connectionState = "noConnection";
 //					connectionState = "connect timeout";
 //    	        		Log.e(LOG_TAG, "Parsing - STATUS_TIMEOUT");
-//					// сообщаем о таймауте 
+//					// СЃРѕРѕР±С‰Р°РµРј Рѕ С‚Р°Р№РјР°СѓС‚Рµ 
 //					intent.putExtra(PARAM_TASK, task);
 //					intent.putExtra(PARAM_OWNER, owner);
 //					intent.putExtra(PARAM_SERVICESTATUS, STATUS_IN_WORK);
@@ -582,7 +582,7 @@ public class PTSMasterService extends Service {
 				if (resultThread == funcPTSMaster.STATUS_NOCONNECT) {
 					Log.e(LOG_TAG, "Connection - STATUS_NOCONNECT");
 					connectionState = "noConnection";
-//					// сообщаем о NOCONNECT 
+//					// СЃРѕРѕР±С‰Р°РµРј Рѕ NOCONNECT 
 //					intent.putExtra(PARAM_TASK, task);
 //					intent.putExtra(PARAM_OWNER, owner);
 //					intent.putExtra(PARAM_SERVICESTATUS, STATUS_IN_WORK);
@@ -625,11 +625,11 @@ public class PTSMasterService extends Service {
 ////                timer.cancel();
 //                int result = msg.getData().getInt("ptsMasterAnswer");
 //                if (result == funcPTSMaster.STATUS_IS_DATA){
-//	                // --- Данные приняты
+//	                // --- Р”Р°РЅРЅС‹Рµ РїСЂРёРЅСЏС‚С‹
 //                	int ptsMasterOffset = 0;
 //                	if (msg.getData().getByteArray(PTSMasterService.PARAM_RESULT_BUFF) == null) {
 //                		Log.e("Parsing", "NULL");
-//                		// сообщаем о пакете без данных 
+//                		// СЃРѕРѕР±С‰Р°РµРј Рѕ РїР°РєРµС‚Рµ Р±РµР· РґР°РЅРЅС‹С… 
 //                        intent.putExtra(PARAM_TASK, task);
 //                        intent.putExtra(PARAM_OWNER, owner);
 //                        intent.putExtra(PARAM_FUNCTION, function);
@@ -639,10 +639,10 @@ public class PTSMasterService extends Service {
 //                	}
 //                	else {
 //						// ========================================================================================================================================================
-//						//																	ПАРСИНГ 
+//						//																	РџРђР РЎРРќР“ 
 //						// ========================================================================================================================================================
 //		                byte ptsMasterData[] = msg.getData().getByteArray(PTSMasterService.PARAM_RESULT_BUFF);
-//                		// сообщаем об успехе 
+//                		// СЃРѕРѕР±С‰Р°РµРј РѕР± СѓСЃРїРµС…Рµ 
 //                        intent.putExtra(PARAM_TASK, task);
 //                        intent.putExtra(PARAM_OWNER, owner);
 //                        intent.putExtra(PARAM_FUNCTION, function);
@@ -655,7 +655,7 @@ public class PTSMasterService extends Service {
 //                }
 //                if (result == funcPTSMaster.STATUS_DAMAGED){
 //                	Log.e("Parsing", "PTSMasterService - DAMAGED");
-//            		// сообщаем о неправильном пакете  
+//            		// СЃРѕРѕР±С‰Р°РµРј Рѕ РЅРµРїСЂР°РІРёР»СЊРЅРѕРј РїР°РєРµС‚Рµ  
 //                    intent.putExtra(PARAM_TASK, task);
 //                    intent.putExtra(PARAM_OWNER, owner);
 //                    intent.putExtra(PARAM_FUNCTION, function);
@@ -668,7 +668,7 @@ public class PTSMasterService extends Service {
 //	                String otal = msg.getData().getString("timer");
 //		            if (otal.equals("Timeout")) {
 //                		Log.e("timer", "Task is timeout");
-//                		// сообщаем о таймауте 
+//                		// СЃРѕРѕР±С‰Р°РµРј Рѕ С‚Р°Р№РјР°СѓС‚Рµ 
 //                        intent.putExtra(PARAM_TASK, task);
 //                        intent.putExtra(PARAM_OWNER, owner);
 //                        intent.putExtra(PARAM_FUNCTION, function);
@@ -682,7 +682,7 @@ public class PTSMasterService extends Service {
 //	            if (otal.equals("cancel")) {
 //                    Toast.makeText(getApplicationContext(), "dialog is cancel", Toast.LENGTH_SHORT).show();
 //            		Log.e("Handler", "dialog is cancel");
-//            		// сообщаем о таймауте 
+//            		// СЃРѕРѕР±С‰Р°РµРј Рѕ С‚Р°Р№РјР°СѓС‚Рµ 
 //                    intent.putExtra(PARAM_TASK, task);
 //                    intent.putExtra(PARAM_OWNER, owner);
 //                    intent.putExtra(PARAM_FUNCTION, function);
@@ -702,7 +702,7 @@ public class PTSMasterService extends Service {
 ////      try {
 ////        TimeUnit.SECONDS.sleep(time);
 //    	  
-//        // сообщаем об старте задачи
+//        // СЃРѕРѕР±С‰Р°РµРј РѕР± СЃС‚Р°СЂС‚Рµ Р·Р°РґР°С‡Рё
 //        intent.putExtra(PARAM_TASK, task);
 //        intent.putExtra(PARAM_SERVICESTATUS, STATUS_START);
 //        sendBroadcast(intent);
@@ -713,14 +713,14 @@ public class PTSMasterService extends Service {
 //		
 //		int fileId = 0;
 //		Log.i("deviceId", deviceId);
-//		// ---------------------------------- Активизирую связь с сервером  
+//		// ---------------------------------- РђРєС‚РёРІРёР·РёСЂСѓСЋ СЃРІСЏР·СЊ СЃ СЃРµСЂРІРµСЂРѕРј  
 //		messagingClient = new Messaging(mHandler, function, buffOrder, buffOrderLength, idPacket, funcPTSMaster.REQUEST_MSG);
 //		messagingClient.start();
 //		
-//		// ---------------------------------- Запускаю таймер времени работы UDT-клиента  
+//		// ---------------------------------- Р—Р°РїСѓСЃРєР°СЋ С‚Р°Р№РјРµСЂ РІСЂРµРјРµРЅРё СЂР°Р±РѕС‚С‹ UDT-РєР»РёРµРЅС‚Р°  
 //		timer = new Timer("PTSMaster_TimerTimeout");
 //		TimerTask task = new PTSMaster_TimerTimeout(mHandler);
-//		// Устанавливаю время ожидания соединения (в милисекундах) 
+//		// РЈСЃС‚Р°РЅР°РІР»РёРІР°СЋ РІСЂРµРјСЏ РѕР¶РёРґР°РЅРёСЏ СЃРѕРµРґРёРЅРµРЅРёСЏ (РІ РјРёР»РёСЃРµРєСѓРЅРґР°С…) 
 //		timer.schedule( task, 15000 );
 //		
 //      try {
@@ -736,7 +736,7 @@ public class PTSMasterService extends Service {
 //			Log.e("Exception", "e=" + e);
 //        }
 //
-//        // сообщаем об окончании задачи
+//        // СЃРѕРѕР±С‰Р°РµРј РѕР± РѕРєРѕРЅС‡Р°РЅРёРё Р·Р°РґР°С‡Рё
 //        intent.putExtra(PARAM_SERVICESTATUS, STATUS_FINISH);
 //        sendBroadcast(intent);
 //        
@@ -768,7 +768,7 @@ class PTSMaster_TimerTimeout extends TimerTask
 	@Override
 	public void run() {
 		Log.d("PTSMaster_TimerTimeout", "TIMEOUT");
-		// -------------------------------- Ответ 
+		// -------------------------------- РћС‚РІРµС‚ 
         Message msg = mHandler.obtainMessage();
         Bundle b = new Bundle();
         b.putInt(PTSMasterService.PARAM_THREADRESULT, funcPTSMaster.STATUS_TIMEOUT);
@@ -799,7 +799,7 @@ class PTSMaster_ConnectionTimerTimeout extends TimerTask
 	public void run() {
 		Log.d("PTSMaster_ConnTimeT-out", "TIMEOUT");
 		if (connectionPTR.isAlive()) {
-			// -------------------------------- Ответ 
+			// -------------------------------- РћС‚РІРµС‚ 
             Message msg = mHandler.obtainMessage();
             Bundle b = new Bundle();
             b.putInt(PTSMasterService.PARAM_THREADRESULT, funcPTSMaster.STATUS_TIMEOUT);
@@ -846,7 +846,7 @@ class prepareConnection extends Thread
 			if (this.timer != null) {
 				this.timer.cancel();
 			}
-			// -------------------------------- Ответ 
+			// -------------------------------- РћС‚РІРµС‚ 
 			Message msg = mHandler.obtainMessage();
 			Bundle b = new Bundle();
 			b.putInt(PTSMasterService.PARAM_THREADRESULT, funcPTSMaster.STATUS_CONNECTOK);
@@ -862,7 +862,7 @@ class prepareConnection extends Thread
 			if (this.timer != null) {
 				this.timer.cancel();
 			}
-			// -------------------------------- Ответ 
+			// -------------------------------- РћС‚РІРµС‚ 
 			Message msg = mHandler.obtainMessage();
 			Bundle b = new Bundle();
 			b.putInt(PTSMasterService.PARAM_THREADRESULT, funcPTSMaster.STATUS_NOCONNECT);
@@ -886,7 +886,7 @@ class prepareConnection extends Thread
 class Messaging extends Thread
 {  
 	/**
-		Создание потока-фильтра
+		РЎРѕР·РґР°РЅРёРµ РїРѕС‚РѕРєР°-С„РёР»СЊС‚СЂР°
 	   @param is the output stream
 	   @param os the output stream
 	*/
@@ -943,7 +943,7 @@ class Messaging extends Thread
 				byte buff[] = new byte[20*1024];
 				int length = 0; 
 	
-				// ---------------------------------- Добавляю заголовок  
+				// ---------------------------------- Р”РѕР±Р°РІР»СЏСЋ Р·Р°РіРѕР»РѕРІРѕРє  
 				System.arraycopy(funcPTSMaster.PACKAGE_SIGN, 0, buff, 0, 4);
 				length += 4;
 				buff[length++] = (byte) requestType;
@@ -956,7 +956,7 @@ class Messaging extends Thread
 					System.arraycopy(myLib.intToByteArray(idPacket), 0, buff, length, 4);
 					length += 4;
 		
-					// ---------------------------------- Добавляю поле с названием функции   
+					// ---------------------------------- Р”РѕР±Р°РІР»СЏСЋ РїРѕР»Рµ СЃ РЅР°Р·РІР°РЅРёРµРј С„СѓРЅРєС†РёРё   
 					switch (function) {
 						case PTSMasterService.FUNC_CLERCLIST:
 							funcName = "clerkList";
@@ -1015,14 +1015,14 @@ class Messaging extends Thread
 					}
 					length += funcPTSMaster.prepareFunctionName(buff, "posServer", funcName, length);
 		
-					// ---------------------------------- Добавляю тело сообщения  
+					// ---------------------------------- Р”РѕР±Р°РІР»СЏСЋ С‚РµР»Рѕ СЃРѕРѕР±С‰РµРЅРёСЏ  
 					System.arraycopy(buffParam, 0, buff, length, buffParamLength);
 					length += buffParamLength;
 				}
 	
 				// =========================================
 	
-				// отправляем данные 
+				// РѕС‚РїСЂР°РІР»СЏРµРј РґР°РЅРЅС‹Рµ 
 //			      Log.i("Messaging", "--> 0x" + myLib.byteArrayToHexString(buff, length));
 	
 				bufOut.put(buff, 0, length);
@@ -1040,13 +1040,13 @@ class Messaging extends Thread
 //				int offsetCmp = 0;
 //				ByteBuffer buf = ByteBuffer.wrap(bytess);
 //
-//				// жду ответ
+//				// Р¶РґСѓ РѕС‚РІРµС‚
 //				int size = PTSMasterService.channel.read(buf);
 ////		            Log.i("Messaging", "<-- 0x" + myLib.byteArrayToHexString(buf.array(), size));
 //				if (size < 0) {
 //					timer.cancel();
 //					Log.e("Packet", "size < 0");
-////					// -------------------------------- Ответ 
+////					// -------------------------------- РћС‚РІРµС‚ 
 ////					Message msg = mHandler.obtainMessage();
 ////					Bundle b = new Bundle();
 ////					b.putInt(PTSMasterService.PARAM_THREADRESULT, funcPTSMaster.STATUS_DAMAGED);
@@ -1060,16 +1060,16 @@ class Messaging extends Thread
 //					break;
 //				}
 //
-//				//--Добавляю полученные данные в контейнер для обработки
+//				//--Р”РѕР±Р°РІР»СЏСЋ РїРѕР»СѓС‡РµРЅРЅС‹Рµ РґР°РЅРЅС‹Рµ РІ РєРѕРЅС‚РµР№РЅРµСЂ РґР»СЏ РѕР±СЂР°Р±РѕС‚РєРё
 //				System.arraycopy(buf.array(), 0, bufStream, offsetAppend, size);
 //				offsetAppend += size;
 //
-//				//--Проверяем цельность пакета и парсим полученные данные
+//				//--РџСЂРѕРІРµСЂСЏРµРј С†РµР»СЊРЅРѕСЃС‚СЊ РїР°РєРµС‚Р° Рё РїР°СЂСЃРёРј РїРѕР»СѓС‡РµРЅРЅС‹Рµ РґР°РЅРЅС‹Рµ
 //				res = funcPTSMaster.collectPackage(bufStream, offsetAppend, idPacket);
 //				if (res.result == funcPTSMaster.COLLECT_READY) {
 //					timer.cancel();
-////			            Log.i("Packet", "Пакет принят полностью");
-//					// -------------------------------- Ответ 
+////			            Log.i("Packet", "РџР°РєРµС‚ РїСЂРёРЅСЏС‚ РїРѕР»РЅРѕСЃС‚СЊСЋ");
+//					// -------------------------------- РћС‚РІРµС‚ 
 //					Message msg = mHandler.obtainMessage();
 //					Bundle b = new Bundle();
 //					b.putInt(PTSMasterService.PARAM_THREADRESULT, funcPTSMaster.STATUS_IS_DATA);
@@ -1080,7 +1080,7 @@ class Messaging extends Thread
 //					b.putInt(PTSMasterService.PARAM_FUNCTION, function);
 //					b.putByteArray(PTSMasterService.PARAM_RESULT_BUFF, res.packetData);
 ////			            b.putByteArray("ptsMasterData", res.packetData);
-////			            Log.i("Ответ", myLib.byteArrayToHexString(res.packetData, res.packetData.length));
+////			            Log.i("РћС‚РІРµС‚", myLib.byteArrayToHexString(res.packetData, res.packetData.length));
 ////			            b.putInt("ptsMasterDataLength", funcPTSMaster.STATUS_IS_DATA);
 //					msg.setData(b);
 //					mHandler.sendMessage(msg);
@@ -1089,7 +1089,7 @@ class Messaging extends Thread
 //				if (res.result == funcPTSMaster.COLLECT_DAMAGED) {
 //					timer.cancel();
 //					Log.e("Packet", "DAMAGED");
-//					// -------------------------------- Ответ 
+//					// -------------------------------- РћС‚РІРµС‚ 
 //					Message msg = mHandler.obtainMessage();
 //					Bundle b = new Bundle();
 //					b.putInt(PTSMasterService.PARAM_THREADRESULT, funcPTSMaster.STATUS_DAMAGED);
@@ -1114,7 +1114,7 @@ class Messaging extends Thread
 			else {
 				timer.cancel();
 				Log.e("Messaging", "NO CONECTION!!!");
-				// -------------------------------- Ответ 
+				// -------------------------------- РћС‚РІРµС‚ 
 				Message msg = mHandler.obtainMessage();
 				Bundle b = new Bundle();
 				b.putInt(PTSMasterService.PARAM_THREADRESULT, funcPTSMaster.STATUS_NOCONNECT);
@@ -1132,7 +1132,7 @@ class Messaging extends Thread
 			Log.w("WarningIOException", "IOException = " + e + "\n");
 	
 //				if (connectionState.equals("noConnect")) {
-//					// -------------------------------- Ответ 
+//					// -------------------------------- РћС‚РІРµС‚ 
 //					Message msg = mHandler.obtainMessage();
 //					Bundle b = new Bundle();
 //					b.putInt(PTSMasterService.PARAM_THREADRESULT, funcPTSMaster.STATUS_NOCONNECT);
@@ -1148,7 +1148,7 @@ class Messaging extends Thread
 	          
 	          
 //			        String err = "Error = " + e;
-//					// -------------------------------- Ответ 
+//					// -------------------------------- РћС‚РІРµС‚ 
 //			        Message msg3 = mHandler.obtainMessage();
 //			        Bundle k= new Bundle();
 //			        k.putInt(PTSMasterService.PARAM_SERVICESTATUS, 186);
@@ -1161,7 +1161,7 @@ class Messaging extends Thread
 		}
 //		catch (InterruptedException e) {
 ////			        String err2 = "Error = " + e;
-////					// -------------------------------- Ответ 
+////					// -------------------------------- РћС‚РІРµС‚ 
 ////			        Message msg2 = mHandler.obtainMessage();
 ////			        Bundle k= new Bundle();
 ////			        k.putInt(PTSMasterService.PARAM_SERVICESTATUS, 187);
@@ -1190,7 +1190,7 @@ class Messaging extends Thread
 class ReadThread extends Thread
 {  
 	/**
-		Создание потока-фильтра
+		РЎРѕР·РґР°РЅРёРµ РїРѕС‚РѕРєР°-С„РёР»СЊС‚СЂР°
 	   @param is the output stream
 	   @param os the output stream
 	*/
@@ -1233,12 +1233,12 @@ class ReadThread extends Thread
 						byte[] bytess = new byte[100*1024];
 						ByteBuffer buf = ByteBuffer.wrap(bytess);
 		
-						// жду входные данные 
+						// Р¶РґСѓ РІС…РѕРґРЅС‹Рµ РґР°РЅРЅС‹Рµ 
 						int size = PTSMasterService.channel.read(buf);
 						if (size < 0) {
 							Log.e("Packet", "size < 0");
 							PTSMasterService.connectionState = "unknown";
-							// -------------------------------- Ответ 
+							// -------------------------------- РћС‚РІРµС‚ 
 							Message msg = mHandler.obtainMessage();
 							Bundle b = new Bundle();
 							b.putInt(PTSMasterService.PARAM_THREADRESULT, funcPTSMaster.STATUS_CONECTIONLOST);
@@ -1248,11 +1248,11 @@ class ReadThread extends Thread
 						}
 //				        Log.i("ReadThread", "<-- 0x" + myLib.byteArrayToHexString(buf.array(), size));
 		
-						//--Добавляю полученные данные в контейнер для обработки
+						//--Р”РѕР±Р°РІР»СЏСЋ РїРѕР»СѓС‡РµРЅРЅС‹Рµ РґР°РЅРЅС‹Рµ РІ РєРѕРЅС‚РµР№РЅРµСЂ РґР»СЏ РѕР±СЂР°Р±РѕС‚РєРё
 						System.arraycopy(buf.array(), 0, bufStream, offsetAppend, size);
 						offsetAppend += size;
 		
-						//--Проверяем цельность пакета и парсим полученные данные
+						//--РџСЂРѕРІРµСЂСЏРµРј С†РµР»СЊРЅРѕСЃС‚СЊ РїР°РєРµС‚Р° Рё РїР°СЂСЃРёРј РїРѕР»СѓС‡РµРЅРЅС‹Рµ РґР°РЅРЅС‹Рµ
 						while(true) {
 							res = funcPTSMaster.collectPackage(bufStream, offsetAppend, this.receiveSemaphor);
 							if (res.result == funcPTSMaster.COLLECT_WAIT_FRAGMENT) {
@@ -1264,7 +1264,7 @@ class ReadThread extends Thread
 							if (res.result == funcPTSMaster.COLLECT_SIGNAL) {
 								offsetbufStream += res.packetLength;
 								Log.i("Packet", "COLLECT_SIGNAL");
-								// -------------------------------- Ответ 
+								// -------------------------------- РћС‚РІРµС‚ 
 								Message msg = mHandler.obtainMessage();
 								Bundle b = new Bundle();
 								b.putInt(PTSMasterService.PARAM_THREADRESULT, funcPTSMaster.STATUS_IS_SIGNAL);
@@ -1282,13 +1282,13 @@ class ReadThread extends Thread
 								for (int i = 0; i < this.receiveSemaphor.size(); i++) {
 									if (this.receiveSemaphor.get(i).idPacket == res.semaphor.idPacket)
 									{
-										Log.d(LOG_TAG, "Уд-ю. сем-р idPacket = " + res.semaphor.idPacket);
+										Log.d(LOG_TAG, "РЈРґ. СЃ-СЂ idPacket = " + res.semaphor.idPacket);
 										this.receiveSemaphor.remove(i);
 										break;
 									}
 								}
-//					            Log.i("Packet", "Пакет принят полностью");
-								// -------------------------------- Ответ 
+//					            Log.i("Packet", "РџР°РєРµС‚ РїСЂРёРЅСЏС‚ РїРѕР»РЅРѕСЃС‚СЊСЋ");
+								// -------------------------------- РћС‚РІРµС‚ 
 								Message msg = mHandler.obtainMessage();
 								Bundle b = new Bundle();
 								b.putInt(PTSMasterService.PARAM_THREADRESULT, funcPTSMaster.STATUS_IS_DATA);
@@ -1318,7 +1318,7 @@ class ReadThread extends Thread
 					}            
 				}
 				else {
-					// -------------------------------- Ответ 
+					// -------------------------------- РћС‚РІРµС‚ 
 					Message msg = mHandler.obtainMessage();
 					Bundle b = new Bundle();
 					b.putInt(PTSMasterService.PARAM_THREADRESULT, funcPTSMaster.STATUS_CONECTIONLOST);
@@ -1329,7 +1329,7 @@ class ReadThread extends Thread
 			}
 			catch (IOException e) {
 				Log.w("ReadThread", "IOException = " + e + "\n");
-				// -------------------------------- Ответ 
+				// -------------------------------- РћС‚РІРµС‚ 
 				Message msg = mHandler.obtainMessage();
 				Bundle b = new Bundle();
 				b.putInt(PTSMasterService.PARAM_THREADRESULT, funcPTSMaster.STATUS_CONECTIONLOST);
@@ -1339,7 +1339,7 @@ class ReadThread extends Thread
 			catch (InterruptedException e) {
 				Log.w("ReadThread", "InterruptedException" + e + "\n");
 				break;
-//				// -------------------------------- Ответ 
+//				// -------------------------------- РћС‚РІРµС‚ 
 //				Message msg = mHandler.obtainMessage();
 //				Bundle b = new Bundle();
 //				b.putInt(PTSMasterService.PARAM_THREADRESULT, funcPTSMaster.STATUS_CONECTIONLOST);
@@ -1380,10 +1380,10 @@ class funcPTSMaster
 		(byte)0xFF, (byte)0xFF, (byte)0xFF, (byte)0xFF, (byte)0xFF 
 	};
 
-	public static final int PACKAGE_LEN_OFFSET		= 61;// Позиция в пакете, в которой находится длина поля данных
-	public static final int PACKAGE_RESPONSE_OFFSET	= 4;// Позиция в пакете, в которой находится тип пакета (RESPONSE или REQUEST)
-	public static final int PACKAGE_ID_OFFSET		= 5;// Позиция в пакете, в которой находится id пакета 
-	public static final int PACKAGE_HEADER_LEN		= 65;// Длина заголовка пакета
+	public static final int PACKAGE_LEN_OFFSET		= 61;// РџРѕР·РёС†РёСЏ РІ РїР°РєРµС‚Рµ, РІ РєРѕС‚РѕСЂРѕР№ РЅР°С…РѕРґРёС‚СЃСЏ РґР»РёРЅР° РїРѕР»СЏ РґР°РЅРЅС‹С…
+	public static final int PACKAGE_RESPONSE_OFFSET	= 4;// РџРѕР·РёС†РёСЏ РІ РїР°РєРµС‚Рµ, РІ РєРѕС‚РѕСЂРѕР№ РЅР°С…РѕРґРёС‚СЃСЏ С‚РёРї РїР°РєРµС‚Р° (RESPONSE РёР»Рё REQUEST)
+	public static final int PACKAGE_ID_OFFSET		= 5;// РџРѕР·РёС†РёСЏ РІ РїР°РєРµС‚Рµ, РІ РєРѕС‚РѕСЂРѕР№ РЅР°С…РѕРґРёС‚СЃСЏ id РїР°РєРµС‚Р° 
+	public static final int PACKAGE_HEADER_LEN		= 65;// Р”Р»РёРЅР° Р·Р°РіРѕР»РѕРІРєР° РїР°РєРµС‚Р°
 	public static final int PACKAGE_POSTFIX_LEN		= 16;
 //	public static final int PACKAGE_DESCR_LEN		= (PACKAGE_PREFIX_LEN+PACKAGE_POSTFIX_LEN);
 	public static final int PACKAGE_MAX_LEN			= (1024*1024);
@@ -1484,7 +1484,7 @@ class funcPTSMaster
 			return res;
 		}
 		
-		//=================================================================  Проверка целостности пакета 
+		//=================================================================  РџСЂРѕРІРµСЂРєР° С†РµР»РѕСЃС‚РЅРѕСЃС‚Рё РїР°РєРµС‚Р° 
 		if (!myLib.memcmp(PACKAGE_SIGN, InPackage, PACKAGE_SIGN.length))
 		{
 			Log.e("collectPackage", "BAD PACKAGE_SIGN: " + myLib.getIntFromByteArray(InPackage, 0, 4));
@@ -1569,15 +1569,15 @@ class funcPTSMaster
 	}
 
 		
-//		//--Проверяем пришло ли статусное сообщение
+//		//--РџСЂРѕРІРµСЂСЏРµРј РїСЂРёС€Р»Рѕ Р»Рё СЃС‚Р°С‚СѓСЃРЅРѕРµ СЃРѕРѕР±С‰РµРЅРёРµ
 //		if(InPackageString.startsWith(ANSWER_PREFIX))
 //		{
-//			Log.i("collectPackage", "пришло статусное сообщение");
-//			//--Пакет не заканчивается на \r\n добавляем к фрагментам
+//			Log.i("collectPackage", "РїСЂРёС€Р»Рѕ СЃС‚Р°С‚СѓСЃРЅРѕРµ СЃРѕРѕР±С‰РµРЅРёРµ");
+//			//--РџР°РєРµС‚ РЅРµ Р·Р°РєР°РЅС‡РёРІР°РµС‚СЃСЏ РЅР° \r\n РґРѕР±Р°РІР»СЏРµРј Рє С„СЂР°РіРјРµРЅС‚Р°Рј
 //			res.offset = InPackageString.indexOf(ANSWER_POSTFIX) + ANSWER_POSTFIX.length(); 
 //			if(res.offset == -1)//ANSWER_POSTFIX))
 //			{
-//				//--Максимальная длинна больше чем 64 байта - неправильный статус
+//				//--РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РґР»РёРЅРЅР° Р±РѕР»СЊС€Рµ С‡РµРј 64 Р±Р°Р№С‚Р° - РЅРµРїСЂР°РІРёР»СЊРЅС‹Р№ СЃС‚Р°С‚СѓСЃ
 //				if(res.offset > ANSWER_MAX_LEN)
 //				{
 //					Log.e("collectPackage", "ANSWER_MAX_LEN: " + String.valueOf(res.offset));
@@ -1593,17 +1593,17 @@ class funcPTSMaster
 //				}
 //			}
 //
-//			//--Все проверки прошли - сообщение получено полностью
+//			//--Р’СЃРµ РїСЂРѕРІРµСЂРєРё РїСЂРѕС€Р»Рё - СЃРѕРѕР±С‰РµРЅРёРµ РїРѕР»СѓС‡РµРЅРѕ РїРѕР»РЅРѕСЃС‚СЊСЋ
 //			res.result = COLLECT_WAIT_FRAGMENT;
 //			return res;
 //		}
-//		else	//--Сообщение данными
+//		else	//--РЎРѕРѕР±С‰РµРЅРёРµ РґР°РЅРЅС‹РјРё
 //		{
 ////			res.offset = InPackageString.indexOf(PACKAGE_SIGN) + PACKAGE_SIGN.length(); 
-//			Log.i("collectPackage", "пришло сообщение c данными");
+//			Log.i("collectPackage", "РїСЂРёС€Р»Рѕ СЃРѕРѕР±С‰РµРЅРёРµ c РґР°РЅРЅС‹РјРё");
 //			Log.i("collectPackage", "length_InPackage: " + String.valueOf(length_InPackage));
 //			
-//			//--Если признак пакета отсутствует - рвем коннект
+//			//--Р•СЃР»Рё РїСЂРёР·РЅР°Рє РїР°РєРµС‚Р° РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚ - СЂРІРµРј РєРѕРЅРЅРµРєС‚
 //			if(!myLib.memcmp(PACKAGE_SIGN, InPackage, PACKAGE_SIGN.length))
 //			{
 //				Log.e("collectPackage", "InPackage: " + myLib.byteArrayToHexString(InPackage, length_InPackage));
@@ -1612,19 +1612,19 @@ class funcPTSMaster
 //				return res;
 //			}
 //			
-//			//--Если длинна меньше чем длинна дескриптора ждем следующий фрагмент
+//			//--Р•СЃР»Рё РґР»РёРЅРЅР° РјРµРЅСЊС€Рµ С‡РµРј РґР»РёРЅРЅР° РґРµСЃРєСЂРёРїС‚РѕСЂР° Р¶РґРµРј СЃР»РµРґСѓСЋС‰РёР№ С„СЂР°РіРјРµРЅС‚
 //			if(length_InPackage < PACKAGE_DESCR_LEN)
 //			{
 //				res.result = COLLECT_WAIT_FRAGMENT;
 //				return res;
 //			}
 //
-//			//--Если данные о длинне пакета еще не получены - получаем
+//			//--Р•СЃР»Рё РґР°РЅРЅС‹Рµ Рѕ РґР»РёРЅРЅРµ РїР°РєРµС‚Р° РµС‰Рµ РЅРµ РїРѕР»СѓС‡РµРЅС‹ - РїРѕР»СѓС‡Р°РµРј
 //			if (res.packetLength == 0) {
 //				res.packetLength = myLib.getIntFromByteArray(InPackage, PACKAGE_LENGTH_POS, DATA_LEN_i);
 //			}
 //
-//			//--Если длинна заявленных, или полученных данных больше максимальной длинны
+//			//--Р•СЃР»Рё РґР»РёРЅРЅР° Р·Р°СЏРІР»РµРЅРЅС‹С…, РёР»Рё РїРѕР»СѓС‡РµРЅРЅС‹С… РґР°РЅРЅС‹С… Р±РѕР»СЊС€Рµ РјР°РєСЃРёРјР°Р»СЊРЅРѕР№ РґР»РёРЅРЅС‹
 //			if(res.packetLength > PACKAGE_MAX_LEN || length_InPackage > PACKAGE_MAX_LEN)
 //			{
 //				Log.e("collectPackage", "PACKAGE_LENGTH_POS: " + String.valueOf(PACKAGE_LENGTH_POS));
@@ -1634,22 +1634,22 @@ class funcPTSMaster
 //				return res;
 //			}
 //
-//			//--Если длинна полученных данных меньше чем заявленная длинна пакета, ждем следующий фрагмент
+//			//--Р•СЃР»Рё РґР»РёРЅРЅР° РїРѕР»СѓС‡РµРЅРЅС‹С… РґР°РЅРЅС‹С… РјРµРЅСЊС€Рµ С‡РµРј Р·Р°СЏРІР»РµРЅРЅР°СЏ РґР»РёРЅРЅР° РїР°РєРµС‚Р°, Р¶РґРµРј СЃР»РµРґСѓСЋС‰РёР№ С„СЂР°РіРјРµРЅС‚
 //			if(res.packetLength + PACKAGE_DESCR_LEN < length_InPackage)
 //			{
 //				res.result = COLLECT_WAIT_FRAGMENT;
 //				return res;
 //			}
 //			
-//			//--Если длинна полученных данных совпадает с заявленной длинна пакета, передаем на парс
+//			//--Р•СЃР»Рё РґР»РёРЅРЅР° РїРѕР»СѓС‡РµРЅРЅС‹С… РґР°РЅРЅС‹С… СЃРѕРІРїР°РґР°РµС‚ СЃ Р·Р°СЏРІР»РµРЅРЅРѕР№ РґР»РёРЅРЅР° РїР°РєРµС‚Р°, РїРµСЂРµРґР°РµРј РЅР° РїР°СЂСЃ
 //			if(res.packetLength + PACKAGE_DESCR_LEN == length_InPackage)
 //			{
-//				//--Проверяем MD5 всего пакета
+//				//--РџСЂРѕРІРµСЂСЏРµРј MD5 РІСЃРµРіРѕ РїР°РєРµС‚Р°
 //				if (myLib.md5(InPackage, length_InPackage - PACKAGE_POSTFIX_LEN)
 //						.regionMatches(0, myLib.byteArrayToHexString(InPackage, length_InPackage), 
 //								2 *(length_InPackage - PACKAGE_POSTFIX_LEN), 
 //								PACKAGE_POSTFIX_LEN)) {
-//					Log.i("collectPackage", "MD5 сравнилась!!!");
+//					Log.i("collectPackage", "MD5 СЃСЂР°РІРЅРёР»Р°СЃСЊ!!!");
 //					res.packetData = new byte[res.packetLength];
 //					
 //					System.arraycopy(InPackage, PACKAGE_PREFIX_LEN, res.packetData, 0, res.packetLength);
@@ -1663,7 +1663,7 @@ class funcPTSMaster
 //				return res;
 //			}
 //			
-//			//--Если длинна полученных данных больше заявленной длинны пакета
+//			//--Р•СЃР»Рё РґР»РёРЅРЅР° РїРѕР»СѓС‡РµРЅРЅС‹С… РґР°РЅРЅС‹С… Р±РѕР»СЊС€Рµ Р·Р°СЏРІР»РµРЅРЅРѕР№ РґР»РёРЅРЅС‹ РїР°РєРµС‚Р°
 //			if(res.packetLength + PACKAGE_POSTFIX_LEN > length_InPackage)
 //			{
 //				res.result = COLLECT_DAMAGED;
@@ -1680,18 +1680,18 @@ class funcPTSMaster
 	public static int prepareFunctionName(byte[] data, String msg_addr, String msg_fn, int offset) {
 		byte buff[] = data;
 		int buffOffset = offset;
-		//  Добавляю идентификатор терминала  
+		//  Р”РѕР±Р°РІР»СЏСЋ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С‚РµСЂРјРёРЅР°Р»Р°  
 		for (int i = 0; i < msg_addr.length(); i++) {
 			buff[buffOffset+i] = (byte) msg_addr.charAt(i);
 		}
 		buffOffset += 24;
-		//  Добавляю идентификатор терминала  
+		//  Р”РѕР±Р°РІР»СЏСЋ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С‚РµСЂРјРёРЅР°Р»Р°  
 		for (int i = 0; i < msg_fn.length(); i++) {
 			buff[buffOffset+i] = (byte) msg_fn.charAt(i);
 		}
 		buffOffset += 24;
 		
-		// Поле "subsys"
+		// РџРѕР»Рµ "subsys"
 		for (int i = 0; i < 4; i++) {
 			buff[buffOffset+i] = (byte) 0x00;
 		}
@@ -1981,10 +1981,10 @@ class funcPTSMaster
 
 		for (int i = 0; i < varMap.size(); i++) {
 			if (!varMap.get(i).mapKey.isEmpty()) {
-				// Генерация поля ключа
+				// Р“РµРЅРµСЂР°С†РёСЏ РїРѕР»СЏ РєР»СЋС‡Р°
 				try {
 					byte[] utf16le = varMap.get(i).mapKey.getBytes("UTF-16BE");
-					// Устанавливаю "Размер поля "Ключ" (BE)"
+					// РЈСЃС‚Р°РЅР°РІР»РёРІР°СЋ "Р Р°Р·РјРµСЂ РїРѕР»СЏ "РљР»СЋС‡" (BE)"
 					System.arraycopy(myLib.intToByteArrayBE(utf16le.length), 0, buff, cnt, 4);
 					cnt += 4;
 					System.arraycopy(utf16le, 0, buff, cnt, utf16le.length);
@@ -2031,10 +2031,10 @@ class funcPTSMaster
 					cnt += 4;
 				}
 				else {
-					// Генерация поля ключа
+					// Р“РµРЅРµСЂР°С†РёСЏ РїРѕР»СЏ РєР»СЋС‡Р°
 					try {
 						byte[] utf16leValue = varMap.get(i).value.getBytes("UTF-16BE");
-						// Устанавливаю "Размер поля "Ключ" (BE)"
+						// РЈСЃС‚Р°РЅР°РІР»РёРІР°СЋ "Р Р°Р·РјРµСЂ РїРѕР»СЏ "РљР»СЋС‡" (BE)"
 						System.arraycopy(myLib.intToByteArrayBE(utf16leValue.length), 0, buff, cnt, 4);
 						cnt += 4;
 						System.arraycopy(utf16leValue, 0, buff, cnt, utf16leValue.length);
@@ -2083,8 +2083,8 @@ class funcPTSMaster
 			
 		}
 
-		cnt -= 4; // Удаляю из размера первые 4 байта (размер бинарника)
-		// Устанавливаю "Размер бинарника (LE)"
+		cnt -= 4; // РЈРґР°Р»СЏСЋ РёР· СЂР°Р·РјРµСЂР° РїРµСЂРІС‹Рµ 4 Р±Р°Р№С‚Р° (СЂР°Р·РјРµСЂ Р±РёРЅР°СЂРЅРёРєР°)
+		// РЈСЃС‚Р°РЅР°РІР»РёРІР°СЋ "Р Р°Р·РјРµСЂ Р±РёРЅР°СЂРЅРёРєР° (LE)"
 		System.arraycopy(myLib.intToByteArray(cnt), 0, buff, 0, 4);
 
 		
@@ -2143,7 +2143,7 @@ class funcPTSMaster
 			if ((amountVarMap > 0) && (currentVarMap <= amountVarMap)) {
 //			    Log.d("<->", "amountVarMap= " + amountVarMap);
 				stringLength = varType;
-				if (stringLength != VAR_UNKNOWN) {// Иногда по задумке режисёра вместо нормального ключа появляется 4 байта 0xFFFFFFFF (пустая строка)
+				if (stringLength != VAR_UNKNOWN) {// РРЅРѕРіРґР° РїРѕ Р·Р°РґСѓРјРєРµ СЂРµР¶РёСЃС‘СЂР° РІРјРµСЃС‚Рѕ РЅРѕСЂРјР°Р»СЊРЅРѕРіРѕ РєР»СЋС‡Р° РїРѕСЏРІР»СЏРµС‚СЃСЏ 4 Р±Р°Р№С‚Р° 0xFFFFFFFF (РїСѓСЃС‚Р°СЏ СЃС‚СЂРѕРєР°)
 					byte[] utf16le = new byte[stringLength];
 					System.arraycopy(buff, cnt, utf16le, 0, stringLength);
 					cnt += stringLength;
@@ -2317,7 +2317,7 @@ class funcPTSMaster
 //		Log.i("$$$", "================================================================");
 
 		// ------------------------------------------------------
-		// Поиск ответа об ошибке 
+		// РџРѕРёСЃРє РѕС‚РІРµС‚Р° РѕР± РѕС€РёР±РєРµ 
 		// ------------------------------------------------------
 //		message  Permission denied
 //		error  2
@@ -2880,7 +2880,7 @@ class funcPTSMaster
 		}
 		
 //
-//		//--Если пакет статусный
+//		//--Р•СЃР»Рё РїР°РєРµС‚ СЃС‚Р°С‚СѓСЃРЅС‹Р№
 //		if (InPackage.package.startsWith(ANSWER_PREFIX)) {
 //			qDebug() << "messagingClient::parsePackage STATUS";
 //			int posStatusEnd = InPackage.package.indexOf(QByteArray::fromHex("0D0A"));
@@ -2893,7 +2893,7 @@ class funcPTSMaster
 //			InPackage.prefix.partId     = atoi(temp.at(3).data());
 //			InPackage.data              = temp.at(4) + "_" + temp.at(5);
 //
-//			//--Удаляем парсенные данные из пакета
+//			//--РЈРґР°Р»СЏРµРј РїР°СЂСЃРµРЅРЅС‹Рµ РґР°РЅРЅС‹Рµ РёР· РїР°РєРµС‚Р°
 //			qDebug() << "InPackage.package.remove1 " << InPackage.package.toHex();
 //			InPackage.package.remove(0, posStatusEnd+2);
 //			qDebug() << "InPackage.package.remove2 " << InPackage.package.toHex();
@@ -2924,14 +2924,14 @@ class funcPTSMaster
 //				return STATUS_NEXT_SERVER;
 //
 //			case 12: //--"FAILED_UNKNOWN";
-//			case -1: //--Не известный статус
-//			default: //--Супер неизвустный статус :)
+//			case -1: //--РќРµ РёР·РІРµСЃС‚РЅС‹Р№ СЃС‚Р°С‚СѓСЃ
+//			default: //--РЎСѓРїРµСЂ РЅРµРёР·РІСѓСЃС‚РЅС‹Р№ СЃС‚Р°С‚СѓСЃ :)
 //				return STATUS_UNKNOWN_STATUS;
 //			}
 //			return STATUS_UNKNOWN_STATUS;
 //		}
 //
-//		//--Если пакет с данными
+//		//--Р•СЃР»Рё РїР°РєРµС‚ СЃ РґР°РЅРЅС‹РјРё
 //		if (InPackage.package.startsWith(PACKAGE_SIGN)) {
 //			qDebug() << "messagingClient::parsePackage DATA";
 //			memcpy(&InPackage.prefix, InPackage.package.data(), PACKAGE_PREFIX_LEN);
@@ -3019,24 +3019,24 @@ class ArrayList_ReceiveSemaphor {
 //}
 ////---------------------------------------------------
 ///******************************
-//* discountType - Тип скидки.
+//* discountType - РўРёРї СЃРєРёРґРєРё.
 //*******************************/
 //class DiscountTypeEnum {
-//    public static final int SingleOpPerc = 0;		//	процентная скидка на последнюю товарную операцию.
-//    public static final int SingleOpSum = 1;		//	суммовая скидка на последнюю товарную операцию.
-//    public static final int SubtotPerc = 2;			//	процентная скидка на промежуточный итог.
-//    public static final int SubtotSum = 3;			//	суммовая скидка на промежуточный итог.
+//    public static final int SingleOpPerc = 0;		//	РїСЂРѕС†РµРЅС‚РЅР°СЏ СЃРєРёРґРєР° РЅР° РїРѕСЃР»РµРґРЅСЋСЋ С‚РѕРІР°СЂРЅСѓСЋ РѕРїРµСЂР°С†РёСЋ.
+//    public static final int SingleOpSum = 1;		//	СЃСѓРјРјРѕРІР°СЏ СЃРєРёРґРєР° РЅР° РїРѕСЃР»РµРґРЅСЋСЋ С‚РѕРІР°СЂРЅСѓСЋ РѕРїРµСЂР°С†РёСЋ.
+//    public static final int SubtotPerc = 2;			//	РїСЂРѕС†РµРЅС‚РЅР°СЏ СЃРєРёРґРєР° РЅР° РїСЂРѕРјРµР¶СѓС‚РѕС‡РЅС‹Р№ РёС‚РѕРі.
+//    public static final int SubtotSum = 3;			//	СЃСѓРјРјРѕРІР°СЏ СЃРєРёРґРєР° РЅР° РїСЂРѕРјРµР¶СѓС‚РѕС‡РЅС‹Р№ РёС‚РѕРі.
 //}
 ////---------------------------------------------------
 ///******************************
-//* itemType - Тип элемента товарной корзины.
+//* itemType - РўРёРї СЌР»РµРјРµРЅС‚Р° С‚РѕРІР°СЂРЅРѕР№ РєРѕСЂР·РёРЅС‹.
 //*******************************/
 //class ItemTypeEnum {
-//    public static final int GoodsItemType = 0;		//	Товар.
-//    public static final int DispenseItemType = 1;	//	Топливо
-//    public static final int DiscountItemType = 2;	//	Скидка
-//    public static final int CommentItemType = 3;	//	Коментарий
-//    public static final int PaymentItemType = 4;	//	Оплата
+//    public static final int GoodsItemType = 0;		//	РўРѕРІР°СЂ.
+//    public static final int DispenseItemType = 1;	//	РўРѕРїР»РёРІРѕ
+//    public static final int DiscountItemType = 2;	//	РЎРєРёРґРєР°
+//    public static final int CommentItemType = 3;	//	РљРѕРјРµРЅС‚Р°СЂРёР№
+//    public static final int PaymentItemType = 4;	//	РћРїР»Р°С‚Р°
 //}
 ////---------------------------------------------------
 //
@@ -3045,27 +3045,27 @@ class ArrayList_ReceiveSemaphor {
 /////////////////////////////////////////////////////////////////////////////////////////
 //class ArrayList_BasketData {
 //
-//    /**Номер корзины*/
+//    /**РќРѕРјРµСЂ РєРѕСЂР·РёРЅС‹*/
 //    int basket;
-//    /**Количество товарных позиций*/
+//    /**РљРѕР»РёС‡РµСЃС‚РІРѕ С‚РѕРІР°СЂРЅС‹С… РїРѕР·РёС†РёР№*/
 //    int itemCount;
-//    /**Количество оплат*/
+//    /**РљРѕР»РёС‡РµСЃС‚РІРѕ РѕРїР»Р°С‚*/
 //    int payCount;
-//    /**Уникальный идентификатор продажи*/
+//    /**РЈРЅРёРєР°Р»СЊРЅС‹Р№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїСЂРѕРґР°Р¶Рё*/
 //    int tag;
-//    /**Сумма товарных позиций*/
+//    /**РЎСѓРјРјР° С‚РѕРІР°СЂРЅС‹С… РїРѕР·РёС†РёР№*/
 //    double itemSum;
-//    /**Сумма оплат*/
+//    /**РЎСѓРјРјР° РѕРїР»Р°С‚*/
 //    double paySum;
-//    /**Номер чека/ Если чек не закрыт = -1*/
+//    /**РќРѕРјРµСЂ С‡РµРєР°/ Р•СЃР»Рё С‡РµРє РЅРµ Р·Р°РєСЂС‹С‚ = -1*/
 //    int billNum;
-//    /**Код кассира*/
+//    /**РљРѕРґ РєР°СЃСЃРёСЂР°*/
 //    int clerk;
-//    /**Флаги*/
+//    /**Р¤Р»Р°РіРё*/
 //    int flags;
-//    /**Количество элементов*/
+//    /**РљРѕР»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚РѕРІ*/
 //    int size;
-//    /**Пустая корзина*/
+//    /**РџСѓСЃС‚Р°СЏ РєРѕСЂР·РёРЅР°*/
 //    bool isEmpty;
 //    ArrayList<ArrayList_BasketItems> basketItem;
 //    
@@ -3089,61 +3089,61 @@ class ArrayList_ReceiveSemaphor {
 //class ArrayList_BasketItems {
 //	
 //			
-//    /**Уникальный ID записи*/
+//    /**РЈРЅРёРєР°Р»СЊРЅС‹Р№ ID Р·Р°РїРёСЃРё*/
 //    int id;
-//    /**Номер корзины*/
+//    /**РќРѕРјРµСЂ РєРѕСЂР·РёРЅС‹*/
 //    int basket;
-//    /**Номер в корзине*/
+//    /**РќРѕРјРµСЂ РІ РєРѕСЂР·РёРЅРµ*/
 //    int index;
-//    /**Тип єлемента*/
+//    /**РўРёРї С”Р»РµРјРµРЅС‚Р°*/
 //    int itemType;
-//    /**Сумма*/
+//    /**РЎСѓРјРјР°*/
 //    double sum;
-//    /**Стоимость*/
+//    /**РЎС‚РѕРёРјРѕСЃС‚СЊ*/
 //    double cost;
-//    /**Флаги*/
+//    /**Р¤Р»Р°РіРё*/
 //    int flags;
-//    /**Код кассира*/
+//    /**РљРѕРґ РєР°СЃСЃРёСЂР°*/
 //    int clerk;
-//    /**Уникальный идентификатор продажи*/
+//    /**РЈРЅРёРєР°Р»СЊРЅС‹Р№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїСЂРѕРґР°Р¶Рё*/
 //    int tag;
-//    /**Код формы оплаты*/
+//    /**РљРѕРґ С„РѕСЂРјС‹ РѕРїР»Р°С‚С‹*/
 //    int payForm;
-//    /**Код эмитента (контрагента)*/
+//    /**РљРѕРґ СЌРјРёС‚РµРЅС‚Р° (РєРѕРЅС‚СЂР°РіРµРЅС‚Р°)*/
 //    int person;
-//    /**Наименование*/
+//    /**РќР°РёРјРµРЅРѕРІР°РЅРёРµ*/
 //    String name;
-//    /**Номер карты, ведомости ...*/
+//    /**РќРѕРјРµСЂ РєР°СЂС‚С‹, РІРµРґРѕРјРѕСЃС‚Рё ...*/
 //    String doc;
-//    /**Строка НСМЭП ...*/
+//    /**РЎС‚СЂРѕРєР° РќРЎРњР­Рџ ...*/
 //    String signature;
-//    /**Номер чека*/
+//    /**РќРѕРјРµСЂ С‡РµРєР°*/
 //    int billNum;
-//    /**Признак возврата*/
+//    /**РџСЂРёР·РЅР°Рє РІРѕР·РІСЂР°С‚Р°*/
 //    bool ret;
-//    /**Количество*/
+//    /**РљРѕР»РёС‡РµСЃС‚РІРѕ*/
 //    double quantity;
-//    /**Тип скидки*/
+//    /**РўРёРї СЃРєРёРґРєРё*/
 //    int discountType;
-//    /**Процент или сумма*/
+//    /**РџСЂРѕС†РµРЅС‚ РёР»Рё СЃСѓРјРјР°*/
 //    double rate;
-//    /**Номер заправочного места*/
+//    /**РќРѕРјРµСЂ Р·Р°РїСЂР°РІРѕС‡РЅРѕРіРѕ РјРµСЃС‚Р°*/
 //    int pump;
-//    /**Номер заправочного крана*/
+//    /**РќРѕРјРµСЂ Р·Р°РїСЂР°РІРѕС‡РЅРѕРіРѕ РєСЂР°РЅР°*/
 //    int nozzle;
-//    /** езервуар*/
+//    /** РµР·РµСЂРІСѓР°СЂ*/
 //    int store;
-//    /**Код товара*/
+//    /**РљРѕРґ С‚РѕРІР°СЂР°*/
 //    int product;
-//    /**Отпущенный объем*/
+//    /**РћС‚РїСѓС‰РµРЅРЅС‹Р№ РѕР±СЉРµРј*/
 //    double volume;
-//    /**Заказанный объем*/
+//    /**Р—Р°РєР°Р·Р°РЅРЅС‹Р№ РѕР±СЉРµРј*/
 //    double orderVolume;
-//    /**Цена*/
+//    /**Р¦РµРЅР°*/
 //    double price;
 //    /**time_t*/
 //    int time;
-//    /**Пользовательская отметка*/
+//    /**РџРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєР°СЏ РѕС‚РјРµС‚РєР°*/
 //    int utag;
 //    
 //    ArrayList_BasketItems() {
@@ -3205,7 +3205,7 @@ class ArrayList_ReceiveSemaphor {
 //    	this.name = name;
 //	}
 //
-//    /**Установить признак возврата*/
+//    /**РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂРёР·РЅР°Рє РІРѕР·РІСЂР°С‚Р°*/
 //    void setRet(Boolean r) {if(r) flags |= FlagsEnum.PayRet; else flags &= ~FlagsEnum.PayRet;}
 //}
 
